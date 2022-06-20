@@ -1,0 +1,115 @@
+\begin{thebibliography}{}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\href{#1}{#1}}
+\providecommand{\dodoi}[1]{doi:~\href{http://doi.org/#1}{\nolinkurl{#1}}}
+\providecommand{\doeprint}[1]{\href{http://ascl.net/#1}{\nolinkurl{http://ascl.net/#1}}}
+\providecommand{\doarXiv}[1]{\href{https://arxiv.org/abs/#1}{\nolinkurl{https://arxiv.org/abs/#1}}}
+
+\bibitem[{{Armstrong} {et~al.}(2014){Armstrong}, {Colgan}, {Kilcrease}, \&
+  {Magee}}]{Armstrong2014}
+{Armstrong}, G.~S.~J., {Colgan}, J., {Kilcrease}, D.~P., \& {Magee}, N.~H.
+  2014, High Energy Density Physics, 10, 61, \dodoi{10.1016/j.hedp.2013.10.005}
+
+\bibitem[{{Baraffe} \& {Chabrier}(2018)}]{Baraffe2018}
+{Baraffe}, I., \& {Chabrier}, G. 2018, \aap, 619, A177,
+  \dodoi{10.1051/0004-6361/201834062}
+
+\bibitem[{{Chabrier} \& {Baraffe}(1997)}]{Chabrier1997}
+{Chabrier}, G., \& {Baraffe}, I. 1997, \aap, 327, 1039.
+\newblock \doarXiv{astro-ph/9704118}
+
+\bibitem[{Chandra \& Varanasi(2015)}]{chandra2015python}
+Chandra, R.~V., \& Varanasi, B.~S. 2015, Python requests essentials (Packt
+  Publishing Ltd)
+
+\bibitem[{{Colgan} {et~al.}(2016){Colgan}, {Kilcrease}, {Magee}, {Sherrill},
+  {Abdallah}, {Hakel}, {Fontes}, {Guzik}, \& {Mussack}}]{Colgan2016}
+{Colgan}, J., {Kilcrease}, D.~P., {Magee}, N.~H., {et~al.} 2016, in APS Meeting
+  Abstracts, Vol. 2016, APS Division of Atomic, Molecular and Optical Physics
+  Meeting Abstracts, D1.008
+
+\bibitem[{DIERCKX(1981)}]{Dierckx1981}
+DIERCKX, P. 1981, IMA Journal of Numerical Analysis, 1, 267,
+  \dodoi{10.1093/imanum/1.3.267}
+
+\bibitem[{Dotter {et~al.}(2008)Dotter, Chaboyer, Jevremovi{\'c}, Kostov, Baron,
+  \& Ferguson}]{Dotter2008}
+Dotter, A., Chaboyer, B., Jevremovi{\'c}, D., {et~al.} 2008, The Astrophysical
+  Journal Supplement Series, 178, 89
+
+\bibitem[{{Feiden} {et~al.}(2021){Feiden}, {Skidmore}, \& {Jao}}]{Feiden2021}
+{Feiden}, G.~A., {Skidmore}, K., \& {Jao}, W.-C. 2021, \apj, 907, 53,
+  \dodoi{10.3847/1538-4357/abcc03}
+
+\bibitem[{{Fontes} {et~al.}(2015){Fontes}, {Zhang}, {Abdallah}, {Clark},
+  {Kilcrease}, {Colgan}, {Cunningham}, {Hakel}, {Magee}, \&
+  {Sherrill}}]{Fontes2016}
+{Fontes}, C.~J., {Zhang}, H.~L., {Abdallah}, J., J., {et~al.} 2015, Journal of
+  Physics B Atomic Molecular Physics, 48, 144014,
+  \dodoi{10.1088/0953-4075/48/14/144014}
+
+\bibitem[{{Grevesse} \& {Sauval}(1998)}]{Grevesse1998}
+{Grevesse}, N., \& {Sauval}, A.~J. 1998, \ssr, 85, 161,
+  \dodoi{10.1023/A:1005161325181}
+
+\bibitem[{{Huebner} \& {Barfield}(2014)}]{Huebner2014}
+{Huebner}, W.~F., \& {Barfield}, W.~D. 2014, {Opacity}, Vol. 402,
+  \dodoi{10.1007/978-1-4614-8797-5}
+
+\bibitem[{{Iglesias} \& {Rogers}(1996)}]{Iglesias1996}
+{Iglesias}, C.~A., \& {Rogers}, F.~J. 1996, \apj, 464, 943,
+  \dodoi{10.1086/177381}
+
+\bibitem[{{Jao} \& {Feiden}(2020)}]{Jao2020}
+{Jao}, W.-C., \& {Feiden}, G.~A. 2020, \aj, 160, 102,
+  \dodoi{10.3847/1538-3881/aba192}
+
+\bibitem[{{Jao} {et~al.}(2018){Jao}, {Henry}, {Gies}, \& {Hambly}}]{Jao2018}
+{Jao}, W.-C., {Henry}, T.~J., {Gies}, D.~R., \& {Hambly}, N.~C. 2018, \apjl,
+  861, L11, \dodoi{10.3847/2041-8213/aacdf6}
+
+\bibitem[{{Magee} {et~al.}(1995){Magee}, {Abdallah}, {Clark}, {Cohen},
+  {Collins}, {Csanak}, {Fontes}, {Gauger}, {Keady}, {Kilcrease}, \&
+  {Merts}}]{Magee1995}
+{Magee}, N.~H., {Abdallah}, J., J., {Clark}, R.~E.~H., {et~al.} 1995, in
+  Astronomical Society of the Pacific Conference Series, Vol.~78, Astrophysical
+  Applications of Powerful New Databases, ed. S.~J. {Adelman} \& W.~L. {Wiese},
+  51
+
+\bibitem[{{Magee} {et~al.}(2004){Magee}, {Abdallah}, {Colgan}, {Hakel},
+  {Kilcrease}, {Mazevet}, {Sherrill}, {Fontes}, \& {Zhang}}]{Magee2004}
+{Magee}, N.~H., {Abdallah}, J., {Colgan}, J., {et~al.} 2004, in American
+  Institute of Physics Conference Series, Vol. 730, Atomic Processes in
+  Plasmas: 14th APS Topical Conference on Atomic Processes in Plasmas, ed.
+  J.~S. {Cohen}, D.~P. {Kilcrease}, \& S.~{Mazavet}, 168--179
+
+\bibitem[{{Mansfield} \& {Kroupa}(2021)}]{Mansfield2021}
+{Mansfield}, S., \& {Kroupa}, P. 2021, \aap, 650, A184,
+  \dodoi{10.1051/0004-6361/202140536}
+
+\bibitem[{Richardson(2007)}]{richardson2007beautiful}
+Richardson, L. 2007, April
+
+\bibitem[{{Rodr{\'\i}guez-L{\'o}pez}(2019)}]{Rodriguez-Lopez2019}
+{Rodr{\'\i}guez-L{\'o}pez}, C. 2019, Frontiers in Astronomy and Space Sciences,
+  6, 76, \dodoi{10.3389/fspas.2019.00076}
+
+\bibitem[{{Seaton} {et~al.}(1994){Seaton}, {Yan}, {Mihalas}, \&
+  {Pradhan}}]{Seaton1994}
+{Seaton}, M.~J., {Yan}, Y., {Mihalas}, D., \& {Pradhan}, A.~K. 1994, \mnras,
+  266, 805, \dodoi{10.1093/mnras/266.4.805}
+
+\bibitem[{{van Saders} \& {Pinsonneault}(2012)}]{van2012}
+{van Saders}, J.~L., \& {Pinsonneault}, M.~H. 2012, \apj, 751, 98,
+  \dodoi{10.1088/0004-637X/751/2/98}
+
+\bibitem[{Virtanen {et~al.}(2020)Virtanen, Gommers, Oliphant, Haberland, Reddy,
+  Cournapeau, Burovski, Peterson, Weckesser, Bright, {van der Walt}, Brett,
+  Wilson, Millman, Mayorov, Nelson, Jones, Kern, Larson, Carey, Polat, Feng,
+  Moore, {VanderPlas}, Laxalde, Perktold, Cimrman, Henriksen, Quintero, Harris,
+  Archibald, Ribeiro, Pedregosa, {van Mulbregt}, \& {SciPy 1.0
+  Contributors}}]{2020SciPy-NMeth}
+Virtanen, P., Gommers, R., Oliphant, T.~E., {et~al.} 2020, Nature Methods, 17,
+  261, \dodoi{10.1038/s41592-019-0686-2}
+
+\end{thebibliography}
