@@ -4,46 +4,44 @@ The top-level auxiliary file: JaoGapOpacityUpdate.aux
 The style file: aasjournal.bst
 Database file #1: src/bib/ms.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Warning--empty publisher in Huebner2014
-You've used 22 entries,
+You've used 20 entries,
             3166 wiz_defined-function locations,
-            837 strings with 10176 characters,
-and the built_in function-call counts, 10130 in all, are:
-= -- 823
-> -- 750
-< -- 16
-+ -- 245
-- -- 261
-* -- 891
-:= -- 1833
-add.period$ -- 23
-call.type$ -- 22
-change.case$ -- 113
-chr.to.int$ -- 22
-cite$ -- 23
-duplicate$ -- 403
-empty$ -- 638
-format.name$ -- 308
-if$ -- 2059
+            822 strings with 9832 characters,
+and the built_in function-call counts, 9222 in all, are:
+= -- 750
+> -- 680
+< -- 14
++ -- 221
+- -- 235
+* -- 813
+:= -- 1669
+add.period$ -- 21
+call.type$ -- 20
+change.case$ -- 99
+chr.to.int$ -- 20
+cite$ -- 20
+duplicate$ -- 368
+empty$ -- 579
+format.name$ -- 278
+if$ -- 1878
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 19
-newline$ -- 75
-num.names$ -- 90
-pop$ -- 141
+missing$ -- 17
+newline$ -- 69
+num.names$ -- 82
+pop$ -- 122
 preamble$ -- 1
-purify$ -- 113
+purify$ -- 99
 quote$ -- 0
-skip$ -- 346
+skip$ -- 318
 stack$ -- 0
-substring$ -- 361
-swap$ -- 31
-text.length$ -- 4
+substring$ -- 340
+swap$ -- 30
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 192
-warning$ -- 1
-while$ -- 83
+type$ -- 177
+warning$ -- 0
+while$ -- 76
 width$ -- 0
-write$ -- 242
-(There was 1 warning)
+write$ -- 222

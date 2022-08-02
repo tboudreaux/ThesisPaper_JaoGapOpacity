@@ -1,14 +1,30 @@
-\section{Opacities}\label{sec:opac}
-Radiative opacity is fundamental to stellar structure, it determines how much
-incident radiation is absorbed or scattered. Moreover, when a media is in
-thermodynamic equilibrium with the radiation field, that is when the temperature
-of the media and that of the radiation field is the same, the opacity may be
-used via Kirchhoff's law to find the emissivity of a material
-\citep{Huebner2014}. Local Thermodynamic Equilibrium (LTE) is a common state to
-find within a star and therefore stellar models have long relied on opacities
-calculated in LTE.
+\section{Updated Opacities}\label{sec:opac}
+% Radiative opacity is fundamental to stellar structure, it determines how much
+% incident radiation is absorbed or scattered. Moreover, when a media is in
+% thermodynamic equilibrium with the radiation field, that is when the temperature
+% of the media and that of the radiation field is the same, the opacity may be
+% used via Kirchhoff's law to find the emissivity of a material
+% \citep{Huebner2014}. Local Thermodynamic Equilibrium (LTE) is a common state to
+% find within a star and therefore stellar models have long relied on opacities
+% calculated in LTE.
+OPAL high-temperature radiative opacity tables in particular are very widely
+used by current generation stellar evolution programs (in addition to current
+generation stellar model and isochrone grids). However, there are two primary
+issues with these tables, one, they are relativly old and therefore do not
+incorperate the most up to date understanding of plasma modeling in their code
+{\color{red} [CITATION]}, and two, they report rossland mean opacitieis to only
+{\color{red} N} digits {\color{red} [WHICH IS AN ISSUE WHY?]}.
 
-\subsection{OPLIB Opacities}
+While the two issues given above should have relativly small affects, the
+strong theoretical opacity dependence of the Jao Gap raises the potential for
+these small effects to measurably shift the gap's location. In order to address
+both the out of date plasma modeling and the low numeric presicion we update
+DSEP to use high temperature opacity tables based on measurements from Los
+Alamos national Labs T-1 group \citep[OPLIB,][]{Colgan2016}. The OPLIB tables
+use the much more up-to-date ATOMIC plasma modeling code {\color{red}
+[CITATION]} in addition to reporting rossland mean opacities to {\color{red} N}
+digits of numeric presicion.
+
 Los Alamos National Labs OPLIB opacity tables were first computed in the 1990s
 using the LEDCOP code \citep{Magee1995}; however, since 2004 efforts have been
 underway to shift OPLIP from LEDCOP to ATOMIC \citep{Magee2004}. ATOMIC is a
@@ -35,6 +51,23 @@ refractive index \citep{Armstrong2014}, and $\kappa_{\nu}$ is the
 frequency-dependent opacity. $\kappa_{\nu}$ is defined as the sum of the
 bound-bound, bound-free, free-free, and scattering opacity computed by ATOMIC.
 
+When comparing OPAL and OPLIB opacity tables (Figure \ref{fig:opacComp}) we
+find OPLIB opacities are systematically lower than OPAL opacities for
+temperature above $10^{6}$ K (Figure \ref{fig:opacComp}). These lower opacities
+will result the temperature where radiation dominates energy transport lowering
+{\color{red} [CITATION?]}. Consequently, the radiative layer in stellar models
+evolved using OPLIB opacity tables will be {\color{red} [further?]} out from
+the models center than it would be in models making use of OPAL tables.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45\textwidth]{src/figures/OpacityComparision.pdf}
+	\caption{Rossland Mean Opacity from both OPAL (black solid) and OPLIB (red
+	dashed) for a GS98 solar composition. Note how above 10$^{6}$ K OPLIB
+	opacities are uniformly smaller than those from OPAL.}
+	\label{fig:opacComp}
+\end{figure}
+
 \subsection{Table Querying and Conversion}
 DSEP uses pre-computed high-temperature opacity tables, in the format supplied
 by OPAL. These tables list the Rosseland-mean opacity, $\kappa_{R}$, along
@@ -45,51 +78,41 @@ as
 \end{align}
 Where $T_{6} = T\times10^{-6}$ and $\rho$ is the mass density. If $T$ and
 $\rho$ are given in cgs then for much of the radius of a star
-$\log(R)\sim-1.5$.  The reason DSEP uses $R$ as opposed to simply tracking
-opacity over density is that $R$ stays relatively fixed, whereas there is an
-enormous dynamic range of densities within a star ($\sim 10^{5}$ [g cm$^{-3}$]
-at the core of an RGB star all the way down to $\sim 10^{-8}$ [g
-cm$^{-3}$] within the envelope). This reduction in
-dynamic-range is important to help reduce floating-point numeric errors, which
-ends up being the primary motivation to use $R$ over $\rho$.
+$\log(R)\sim-1.5$.  $R$ is used, as opposed to simply tracking opacity over
+density, as $R$ stays relatively fixed throuhout the radius of most main
+sequence stars, whereas there is an enormous dynamic range of densities within
+a star ($\sim 10^{5}$ [g cm$^{-3}$] at the core of an RGB star all the way down
+to $\sim 10^{-8}$ [g cm$^{-3}$] within the envelope). 
 
-OPLIB high-temperature opacity tables will replace the OPAL tables DSEP has used
-since the release of the Dartmouth Stellar Evolution Database (DSED) in 2008
-\citep{Dotter2008}. Just as OPAL tables were, OPLIB tables are queried from a
-web interface\footnote{https://aphysics2.lanl.gov/apps/}. So that we might
-generate many tables easily and quickly we develope a web scraper built with
-Python's \texttt{requests} module in addition to the 3rd party
-\texttt{mechanize} and \texttt{BeautifulSoup} modules \citep{chandra2015python,
-richardson2007beautiful} which can get tables with minimal human intervention.
-This web scraper submits a user requested chemical composition (composed of
-mass fractions for elements from Hydrogen to Zinc) to the Los Alamos web form, selects
-0.0005 keV as the lower temperature bound and 60 keV as the upper temperature
-bound, and finally requests opacity measurements for 100 densities, ranging
-from $1.77827941\times 10 ^{-15}$ [g cm$^{-3}$] up to $1\times10^{7}$ [g
-cm$^{-3}$], at each temperature interval. These correspond to approximately the
-same temperature and density range of opacities present in the OPAL opacity
+OPLIB tables are queried from a web
+interface\footnote{https://aphysics2.lanl.gov/apps/}. In order to generate many
+tables easily and quickly we develope a web scraper built with Python's
+\texttt{requests} module in addition to the 3rd party \texttt{mechanize} and
+\texttt{BeautifulSoup} modules \citep{chandra2015python,
+richardson2007beautiful} which can get tables with minimal intervention. This
+web scraper submits a user requested chemical composition (composed of mass
+fractions for elements from Hydrogen to Zinc) to the Los Alamos web form,
+selects 0.0005 keV as the lower temperature bound and 60 keV as the upper
+temperature bound, and finally requests opacity measurements for 100 densities,
+ranging from $1.77827941\times 10 ^{-15}$ [g cm$^{-3}$] up to $1\times10^{7}$
+[g cm$^{-3}$], at each temperature interval. These correspond to approximately
+the same temperature and density range of opacities present in the OPAL opacity
 tables.
 
-So as not to break compatibility with OPAL tables we create a translation layer
-to convert OPLIB tables to OPAL format. This allows for transparent use of the new
-tables without any direct modifications to the DSEP source. The primary job of
-this translation layer is to unit conversion, secondarily the structure of OPAL
-tables must be matched byte-for-byte.
-
 OPLIB reports $\kappa_{R}$ as a function of mass density, temperature in keV,
-and composition. Recall that OPAL tables present opacity as a function of
-temperature in Kelvin, $R$, and composition. The conversion from temperature
-in keV to Kelvin is trivial
+and composition. Recall that DSEP accepts tables where opacity is given as a
+function of temperature in Kelvin, $R$, and composition. The conversion from
+temperature in keV to Kelvin is trivial
 \begin{align}
 	T_{K} = T_{keV} * 11604525.0061657
 \end{align}
-The conversion from mass density to $R$ is more involved. Because $R$ is
+However, the conversion from mass density to $R$ is more involved. Because $R$ is
 coupled with both mass density and temperature there there is no way to
 directly convert tabulated values of opacity reported in the OPLIB tables to
 their equivalents in $R$ space. Instead we must rotate the tables,
 interpolating $\kappa_{R}(\rho,T_{eff}) \rightarrow \kappa_{R}(R,T_{eff})$. 
 
-As a first step in this rotation we use the \texttt{interp2d} function within
+To preform this rotation we use the \texttt{interp2d} function within
 \texttt{scipy}'s \texttt{interpolate} \citep{2020SciPy-NMeth} module to
 construct a cubic bivariate B-spline \citep{Dierckx1981} interpolating function
 $s$, with a smoothing factor of 0, representing the surface $\kappa_{R}(\rho,
@@ -97,10 +120,7 @@ T_{eff})$. For each $R^{i}$ and $T^{j}_{eff}$ which DSEP expects
 high-temperature opacities to be reported for, we evaluate Equation
 \ref{eqn:Req} to find $\rho^{ij} = \rho(T^{j}_{eff},R^{i})$.  Opacities in
 $T_{eff}$, $R$ space are then inferred as $\kappa^{ij}_{R}(R^{i},T^{j}_{eff}) =
-s(\rho^{ij}, T^{j}_{eff})$. Finally, some number of upper-left and lower-right
-hand entries in each table are discarded as DSEP takes non rectangular tables
-as input, the exact number and indices of the discarded entries is dependent
-on composition.
+s(\rho^{ij}, T^{j}_{eff})$. 
 
 As first-order validation of this interpolation scheme we can preform a similar
 interpolation in the opposite direction, rotating the tables back to
@@ -114,8 +134,8 @@ Along the $Log(R)=-1.5$ line the mean fractional difference is $\langle \delta
 0.009$. One point of note is that, because the initial rotation into $Log(R)$
 space also reduces the domain of the opacity function interpolation-edge
 effects which we avoid initially by extending the domain past what DSEP needs
-cannot be avoided when interpolating back into $\rho$ space. In future, a more
-robust validation, which does not reduce the domain size will be conducted.
+cannot be avoided when interpolating back into $\rho$ space. {\color{red} [IS
+THERE SOME MORE CLEAR VALIDATION WHICH I SHOULD PREFORM?]}
 
 \begin{figure}
 	\centering
