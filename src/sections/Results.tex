@@ -1,4 +1,29 @@
 \section{Results}\label{sec:results}
+We quantify the Jao Gap location along the magnitude axis by first subsampling
+our synthetic populations, finding the linear number density along the
+magnitude axis of each subsample, averaging these linear number density and
+extracting peaks from this above a prominence threshold.w Once we have the peak
+location we fit a gaussian to a window centered at the peak giving both an
+estimate of the gap location and the gap width. Figure \ref{fig:JaoGapLocator}
+shows this fit for both OPAL and OPLIB populations.
+
+Our gap identification method finds two potential gaps in the OPLIB data while
+only finding one in the OPAL dataset. 
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45\textwidth]{src/figures/NotebookFigs/OPAL_Jao_locator.png}
+	\includegraphics[width=0.45\textwidth]{src/figures/NotebookFigs/OPLIB_Jao_locator.png}
+	\caption{(right panels) OPAL (top) and OPLIB (bottom) synthetic
+	populations. (left panels) Normalized linear number density along the
+	magnitude axis. A dashed line has been extended from the peak through both
+	panels to make clear where the Identified Jao Gap location is wrt. to the
+	population. }
+	\label{fig:JaoGapLocator}
+\end{figure}
+
+
+
 {\color{red} Talk About results of population synthetis, i.e. where the gap is
 in OPAL vs OPLIB, show the CMD}
 
