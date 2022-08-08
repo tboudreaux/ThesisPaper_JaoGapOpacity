@@ -7,8 +7,31 @@ location we fit a gaussian to a window centered at the peak giving both an
 estimate of the gap location and the gap width. Figure \ref{fig:JaoGapLocator}
 shows this fit for both OPAL and OPLIB populations.
 
-Our gap identification method finds two potential gaps in the OPLIB data while
-only finding one in the OPAL dataset. 
+\begin{table}
+	\centering
+	\begin{tabular}{c | c c}
+		\hline
+		Model & Location & Prominence \\
+		\hline
+		\hline
+		OPAL & 10.15864 & 0.19501 \\
+		OPLIB 1 & 10.17813 & 0.26055 \\
+		OPLIB 2 & 10.21313 & 0.46898
+	\end{tabular}
+	\caption{Locations identified as potential gaps.}
+	\label{tab:GapLocation}
+\end{table}
+
+Our gap identification method finds two potential gaps in the OPLIB (Table
+\ref{tab:GapLocation}) data while only finding one in the OPAL dataset. This
+apparent discrepancy is not due to a fundamental structural difference between
+the OPAL and OPLIB opacity tables; rather, it is attributable to the the
+phasing of the periodic luminosity variations seen accorss mass in Figures
+\ref{fig:OPALPunchIn} and \ref{fig:OPLIBPunchIn} and whether or not the
+injected noise smears all of these together into one gap or two gaps.
+{\color{red} [Run a test where you manually shift the OPAL data to the same
+phase as the OPLIB data to show that this has the effect of making two gaps
+show up]}.
 
 \begin{figure}
 	\centering
@@ -22,10 +45,20 @@ only finding one in the OPAL dataset.
 	\label{fig:JaoGapLocator}
 \end{figure}
 
+Both gaps identified in the OPLIB sample are at fainter magnitudes than the gap
+identified in the OPAL sample. This implies that in the OPLIB sample the
+convective mixing events which drive the kissing instability should happen more
+regularlry and therefore also start earlier in the models evolution. This is
+because each mixing event serves to interupt the ``standard'' luminosity
+evolution of a stellar model, kicking its luminosity back down to what it would
+have been a few Gyrs earlier instead of allowing it to slowly increase. Looking
+at the interior physics of one OPAL and one OPLIB model shows that this shorter
+duration between mixing events is in fact seen (Figure {\color{red} [PUT
+KIPPENHAN DIAGRM HERE]}.
 
 
-{\color{red} Talk About results of population synthetis, i.e. where the gap is
-in OPAL vs OPLIB, show the CMD}
+{\color{red} Go into a theoretical disscusion on why the lower opacities will
+lead to the mixing event happening sooner}
 
 {\color{red} Then compare the results to observations, comment on which one
 matches observations better and also how confident we can be about that}
