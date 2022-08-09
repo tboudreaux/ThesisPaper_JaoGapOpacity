@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2020.1.21)  8 AUG 2022 16:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2020.1.21)  9 AUG 2022 15:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -600,10 +600,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--20
  []
 
 (./src/sections/intro.tex
-
-LaTeX Warning: Reference `sec:p1' on page 1 undefined on input line 6.
-
-) (./src/sections/JaoGap.tex
 Overfull \hbox (111.788pt too wide) has occurred while \output is active
 [] [] 
  []
@@ -614,55 +610,64 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<src/figures/JaoGap.png, id=102, 1637.11626pt x 1228.59pt>
+
+LaTeX Warning: Reference `sec:opacity' on page 2 undefined on input line 56.
+
+
+LaTeX Warning: Reference `sec:SCSM' on page 2 undefined on input line 58.
+
+) (./src/sections/JaoGap.tex
+<src/figures/JaoGap.png, id=110, 1637.11626pt x 1228.59pt>
 File: src/figures/JaoGap.png Graphic file (type png)
 <use src/figures/JaoGap.png>
 Package pdftex.def Info: src/figures/JaoGap.png  used on input line 17.
 (pdftex.def)             Requested size: 230.90128pt x 173.2762pt.
-<src/figures/NotebookFigs/Kippenhan.pdf, id=109, 1090.36191pt x 464.12189pt>
+<src/figures/NotebookFigs/Kippenhan.pdf, id=117, 1090.36191pt x 464.12189pt>
 File: src/figures/NotebookFigs/Kippenhan.pdf Graphic file (type pdf)
 <use src/figures/NotebookFigs/Kippenhan.pdf>
 Package pdftex.def Info: src/figures/NotebookFigs/Kippenhan.pdf  used on input 
 line 47.
 (pdftex.def)             Requested size: 487.45999pt x 207.4932pt.
-)
-(./src/sections/opacity.tex [2 <./src/figures/JaoGap.png>]
+ [2 <./src/figures/JaoGap.png>])
+(./src/sections/opacity.tex
 Underfull \hbox (badness 2012) in paragraph at lines 34--40
 \OT1/cmr/m/n/10 bound-bound, bound-free, free-free, and scat-ter-ing
  []
 
-<src/figures/OpacityComparision.pdf, id=168, 927.61877pt x 775.82573pt>
+[3 <./src/figures/NotebookFigs/Kippenhan.pdf>]
+<src/figures/OpacityComparision.pdf, id=209, 927.61877pt x 775.82573pt>
 File: src/figures/OpacityComparision.pdf Graphic file (type pdf)
 <use src/figures/OpacityComparision.pdf>
 Package pdftex.def Info: src/figures/OpacityComparision.pdf  used on input line
  51.
 (pdftex.def)             Requested size: 230.90128pt x 193.11545pt.
-[3 <./src/figures/NotebookFigs/Kippenhan.pdf> <./src/figures/OpacityComparision
-.pdf
 
-pdfTeX warning: pdflatex (file ./src/figures/OpacityComparision.pdf): PDF inclu
-sion: multiple pdfs with page group included in a single page
->]
 Overfull \hbox (10.88353pt too wide) in paragraph at lines 79--79
 [][]| [] [][][]| 
  []
 
-<src/figures/FractionalDifference.pdf, id=223, 533.75356pt x 457.65639pt>
+[4 <./src/figures/OpacityComparision.pdf>]
+<src/figures/FractionalDifference.pdf, id=248, 533.75356pt x 457.65639pt>
 File: src/figures/FractionalDifference.pdf Graphic file (type pdf)
 <use src/figures/FractionalDifference.pdf>
 Package pdftex.def Info: src/figures/FractionalDifference.pdf  used on input li
 ne 133.
 (pdftex.def)             Requested size: 230.90128pt x 197.97557pt.
-) (./src/sections/SSCM.tex [4 <./src/figures/FractionalDifference.pdf>]
-<src/figures/HRDiagramOPALvsOPLIB_SCCM.pdf, id=251, 925.66647pt x 776.74934pt>
+) (./src/sections/SSCM.tex
+<src/figures/HRDiagramOPALvsOPLIB_SCCM.pdf, id=249, 925.66647pt x 776.74934pt>
 File: src/figures/HRDiagramOPALvsOPLIB_SCCM.pdf Graphic file (type pdf)
 <use src/figures/HRDiagramOPALvsOPLIB_SCCM.pdf>
 Package pdftex.def Info: src/figures/HRDiagramOPALvsOPLIB_SCCM.pdf  used on inp
 ut line 35.
 (pdftex.def)             Requested size: 230.90128pt x 193.74832pt.
 )
-(./src/sections/Modeling.tex
-<src/figures/NotebookFigs/OPALPunchIn.pdf, id=256, 669.76303pt x 611.02657pt>
+(./src/sections/Modeling.tex [5 <./src/figures/FractionalDifference.pdf> <./src
+/figures/HRDiagramOPALvsOPLIB_SCCM.pdf
+
+pdfTeX warning: pdflatex (file ./src/figures/HRDiagramOPALvsOPLIB_SCCM.pdf): PD
+F inclusion: multiple pdfs with page group included in a single page
+>]
+<src/figures/NotebookFigs/OPALPunchIn.pdf, id=284, 669.76303pt x 611.02657pt>
 File: src/figures/NotebookFigs/OPALPunchIn.pdf Graphic file (type pdf)
 <use src/figures/NotebookFigs/OPALPunchIn.pdf>
 Package pdftex.def Info: src/figures/NotebookFigs/OPALPunchIn.pdf  used on inpu
@@ -673,29 +678,23 @@ File: src/figures/NotebookFigs/OPALPunchIn.pdf Graphic file (type pdf)
 Package pdftex.def Info: src/figures/NotebookFigs/OPALPunchIn.pdf  used on inpu
 t line 23.
 (pdftex.def)             Requested size: 230.90128pt x 210.65521pt.
- [5 <./src/figures/HRDiagramOPALvsOPLIB_SCCM.pdf>]
-
-LaTeX Warning: A float is stuck (cannot be placed) on input line 52.
-
-
-LaTeX Warning: A float is stuck (cannot be placed) on input line 52.
-
-
-Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
-
-<src/figures/NotebookFigs/pdist.pdf, id=281, 722.7pt x 722.7pt>
+<src/figures/NotebookFigs/pdist.pdf, id=288, 722.7pt x 722.7pt>
 File: src/figures/NotebookFigs/pdist.pdf Graphic file (type pdf)
 <use src/figures/NotebookFigs/pdist.pdf>
 Package pdftex.def Info: src/figures/NotebookFigs/pdist.pdf  used on input line
  61.
 (pdftex.def)             Requested size: 230.90128pt x 230.89378pt.
-[6 <./src/figures/NotebookFigs/OPALPunchIn.pdf> <./src/figures/NotebookFigs/pdi
-st.pdf
+ [6 <./src/figures/NotebookFigs/OPALPunchIn.pdf>]
 
-pdfTeX warning: pdflatex (file ./src/figures/NotebookFigs/pdist.pdf): PDF inclu
-sion: multiple pdfs with page group included in a single page
->]
-<src/figures/NotebookFigs/OPALOPLIB_popsynth_compare.pdf, id=329, 1251.48045pt 
+LaTeX Warning: A float is stuck (cannot be placed) on input line 83.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 83.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+<src/figures/NotebookFigs/OPALOPLIB_popsynth_compare.pdf, id=325, 1251.48045pt 
 x 476.70503pt>
 File: src/figures/NotebookFigs/OPALOPLIB_popsynth_compare.pdf Graphic file (typ
 e pdf)
@@ -704,33 +703,44 @@ Package pdftex.def Info: src/figures/NotebookFigs/OPALOPLIB_popsynth_compare.pd
 f  used on input line 111.
 (pdftex.def)             Requested size: 436.15294pt x 166.13641pt.
 ) (./src/sections/Results.tex
-<src/figures/NotebookFigs/OPAL_Jao_locator.png, id=334, 680.7834pt x 657.29565p
+<src/figures/NotebookFigs/OPAL_Jao_locator.png, id=330, 680.7834pt x 657.29565p
 t>
 File: src/figures/NotebookFigs/OPAL_Jao_locator.png Graphic file (type png)
 <use src/figures/NotebookFigs/OPAL_Jao_locator.png>
 Package pdftex.def Info: src/figures/NotebookFigs/OPAL_Jao_locator.png  used on
  input line 38.
 (pdftex.def)             Requested size: 230.90128pt x 222.92593pt.
-<src/figures/NotebookFigs/OPLIB_Jao_locator.png, id=335, 680.7834pt x 657.29565
+<src/figures/NotebookFigs/OPLIB_Jao_locator.png, id=331, 680.7834pt x 657.29565
 pt>
 File: src/figures/NotebookFigs/OPLIB_Jao_locator.png Graphic file (type png)
 <use src/figures/NotebookFigs/OPLIB_Jao_locator.png>
 Package pdftex.def Info: src/figures/NotebookFigs/OPLIB_Jao_locator.png  used o
 n input line 39.
 (pdftex.def)             Requested size: 230.90128pt x 222.92593pt.
-<src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf, id=337, 722.7pt x 722.7pt>
+ [7 <./src/figures/NotebookFigs/pdist.pdf>]
+<src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf, id=361, 722.7pt x 722.7pt>
 File: src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf Graphic file (type pdf)
 <use src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf>
 Package pdftex.def Info: src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf  used on in
 put line 72.
 (pdftex.def)             Requested size: 230.90128pt x 230.89378pt.
-) (./src/sections/Conclusion.tex)
-(./JaoGapOpacityUpdate.bbl [7]) [8 <./src/figures/NotebookFigs/OPALOPLIB_popsyn
-th_compare.pdf>] [9 <./src/figures/NotebookFigs/OPAL_Jao_locator.png> <./src/fi
-gures/NotebookFigs/OPLIB_Jao_locator.png>] [10 <./src/figures/NotebookFigs/3HeO
-PAL_OPLIB.pdf>]
+)
+(./src/sections/Conclusion.tex) (./JaoGapOpacityUpdate.bbl [8 <./src/figures/No
+tebookFigs/OPALOPLIB_popsynth_compare.pdf>]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 83.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 83.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+) [9 <./src/figures/NotebookFigs/OPAL_Jao_locator.png> <./src/figures/NotebookF
+igs/OPLIB_Jao_locator.png> <./src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 68.
- (./JaoGapOpacityUpdate.aux)
+
+(./JaoGapOpacityUpdate.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 68.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 68.
 Package rerunfilecheck Info: File `JaoGapOpacityUpdate.out' has not changed.
@@ -741,13 +751,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 9763 strings out of 492641
- 135285 string characters out of 6131787
- 301921 words of memory out of 5000000
- 13422 multiletter control sequences out of 15000+600000
+ 9766 strings out of 492641
+ 135331 string characters out of 6131787
+ 282911 words of memory out of 5000000
+ 13425 multiletter control sequences out of 15000+600000
  15371 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 35i,12n,37p,458b,490s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 35i,12n,37p,458b,512s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/
@@ -772,10 +782,10 @@ b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on JaoGapOpacityUpdate.pdf (10 pages, 3415211 bytes).
+Output written on JaoGapOpacityUpdate.pdf (9 pages, 3418881 bytes).
 PDF statistics:
- 501 PDF objects out of 1000 (max. 8388607)
- 432 compressed objects within 5 object streams
+ 509 PDF objects out of 1000 (max. 8388607)
+ 442 compressed objects within 5 object streams
  76 named destinations out of 1000 (max. 500000)
  136 words of extra memory for PDF output out of 10000 (max. 10000000)
 
