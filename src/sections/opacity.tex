@@ -7,23 +7,27 @@
 % \citep{Huebner2014}. Local Thermodynamic Equilibrium (LTE) is a common state to
 % find within a star and therefore stellar models have long relied on opacities
 % calculated in LTE.
-OPAL high-temperature radiative opacity tables in particular are very widely
-used by current generation isochrone grids \citep[e.g. Dartmouth, MIST, \&
-StarEvol, ][]{Dotter2008,Choi2016,Amard2019}. However, there are two primary
-issues with these tables, one, they are relativly old and therefore do not
-incorperate the most up to date understanding of plasma modeling in their code
-{\color{red} [CITATION]}, and two, they report rossland mean opacitieis to only
-{\color{red} N} digits {\color{red} [WHICH IS AN ISSUE WHY?]}.
+Multiple groups have released high-temperature opacities including the Opacity
+Project \citep[OP][]{Seaton1994}, Laurence Livermore National Labs OPAL opacity
+tables \citep{Iglesias1996}, and Los Alamos National Labs OPLIB opacity tables
+\citep{Colgan2016}. OPAL high-temperature radiative opacity tables in
+particular are very widely used by current generation isochrone grids
+\citep[e.g. Dartmouth, MIST, \& StarEvol, ][]{Dotter2008,Choi2016,Amard2019}.
+However, there are two primary issues with these tables, one, they are
+relativly old and therefore do not incorperate the most up to date
+understanding of plasma modeling in their code {\color{red} [CITATION]}, and
+two, they report rossland mean opacitieis to only {\color{red} N} digits
+{\color{red} [WHICH IS AN ISSUE WHY?]}.
 
-While the two issues given above should have relativly small affects, the
-strong theoretical opacity dependence of the Jao Gap raises the potential for
-these small effects to measurably shift the gap's location. In order to address
-both the out of date plasma modeling and the low numeric presicion we update
-DSEP to use high temperature opacity tables based on measurements from Los
-Alamos national Labs T-1 group \citep[OPLIB,][]{Colgan2016}. The OPLIB tables
-use the much more up-to-date ATOMIC plasma modeling code {\color{red}
-[CITATION]} in addition to reporting rossland mean opacities to {\color{red} N}
-digits of numeric presicion.
+While the two issues given above should have relativly have quite small effects
+on the CMD as a whole, the strong theoretical opacity dependence of the Jao Gap
+raises the potential for these small effects to measurably shift the gap's
+location. In order to address both the out of date plasma modeling and the low
+numeric presicion we update DSEP to use high temperature opacity tables based
+on measurements from Los Alamos national Labs T-1 group
+\citep[OPLIB,][]{Colgan2016}. The OPLIB tables use the much more up-to-date
+ATOMIC plasma modeling code {\color{red} [CITATION]} in addition to reporting
+rossland mean opacities to {\color{red} N} digits of numeric presicion.
 
 ATOMIC \citep{Magee2004} is a LTE and non-LTE opacity and plasma modeling code.
 A major strength of ATOMIC when compared to the older plasma modeling programs
@@ -41,10 +45,9 @@ of temperature).
 When comparing OPAL and OPLIB opacity tables (Figure \ref{fig:opacComp}) we
 find OPLIB opacities are systematically lower than OPAL opacities for
 temperature above $10^{6}$ K (Figure \ref{fig:opacComp}). These lower opacities
-will result the temperature where radiation dominates energy transport lowering
-{\color{red} [CITATION?]}. Consequently, the radiative layer in stellar models
-evolved using OPLIB opacity tables will be {\color{red} [further?]} out from
-the models center than it would be in models making use of OPAL tables.
+will decrease the radiative temperature gradient. Consequently, the radiative
+layer in a stellar model evolved using OPLIB opacity tables will be closer into
+the model core than it would be in models making use of OPAL tables.
 
 \begin{figure}
 	\centering
