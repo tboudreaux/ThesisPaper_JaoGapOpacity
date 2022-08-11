@@ -10,6 +10,11 @@
 {Amard}, L., {Palacios}, A., {Charbonnel}, C., {et~al.} 2019, \aap, 631, A77,
   \dodoi{10.1051/0004-6361/201935160}
 
+\bibitem[{{Bahcall} {et~al.}(2005){Bahcall}, {Serenelli}, \&
+  {Basu}}]{Bahcall2005}
+{Bahcall}, J.~N., {Serenelli}, A.~M., \& {Basu}, S. 2005, \apjl, 621, L85,
+  \dodoi{10.1086/428929}
+
 \bibitem[{{Baraffe} \& {Chabrier}(2018)}]{Baraffe2018}
 {Baraffe}, I., \& {Chabrier}, G. 2018, \aap, 619, A177,
   \dodoi{10.1051/0004-6361/201834062}
@@ -27,11 +32,52 @@ Chandra, R.~V., \& Varanasi, B.~S. 2015, Python requests essentials (Packt
 {Choi}, J., {Dotter}, A., {Conroy}, C., {et~al.} 2016, \apj, 823, 102,
   \dodoi{10.3847/0004-637X/823/2/102}
 
+\bibitem[{{Colgan} {et~al.}(2015){Colgan}, {Kilcrease}, {Magee}, {Abdallah},
+  {Sherrill}, {Fontes}, {Hakel}, \& {Zhang}}]{Colgan2015}
+{Colgan}, J., {Kilcrease}, D.~P., {Magee}, N.~H., {et~al.} 2015, High Energy
+  Density Physics, 14, 33, \dodoi{10.1016/j.hedp.2015.02.006}
+
+\bibitem[{{Colgan} {et~al.}(2013{\natexlab{a}}){Colgan}, {Kilcrease}, {Magee},
+  {Armstrong}, {Abdallah}, {Sherrill}, {Fontes}, {Zhang}, \&
+  {Hakel}}]{Colgan2013a}
+---. 2013{\natexlab{a}}, High Energy Density Physics, 9, 369,
+  \dodoi{10.1016/j.hedp.2013.03.001}
+
+\bibitem[{{Colgan} {et~al.}(2013{\natexlab{b}}){Colgan}, {Kilcrease}, {Magee},
+  {Armstrong}, {Abdallah}, {Sherrill}, {Fontes}, {Zhang}, \&
+  {Hakel}}]{Colgan2013b}
+{Colgan}, J., {Kilcrease}, D.~P., {Magee}, N.~H., J., {et~al.}
+  2013{\natexlab{b}}, in American Institute of Physics Conference Series, Vol.
+  1545, Eighth International Conference on Atomic and Molecular Data and Their
+  Applications: ICAMDATA-2012, ed. J.~D. {Gillaspy}, W.~L. {Wiese}, \& Y.~A.
+  {Podpaly}, 17--26
+
 \bibitem[{{Colgan} {et~al.}(2016){Colgan}, {Kilcrease}, {Magee}, {Sherrill},
   {Abdallah}, {Hakel}, {Fontes}, {Guzik}, \& {Mussack}}]{Colgan2016}
 {Colgan}, J., {Kilcrease}, D.~P., {Magee}, N.~H., {et~al.} 2016, in APS Meeting
   Abstracts, Vol. 2016, APS Division of Atomic, Molecular and Optical Physics
   Meeting Abstracts, D1.008
+
+\bibitem[{{Creevey} {et~al.}(2022){Creevey}, {Sordo}, {Pailler}, {Fr{\'e}mat},
+  {Heiter}, {Th{\'e}venin}, {Andrae}, {Fouesneau}, {Lobel}, {Bailer-Jones},
+  {Garabato}, {Bellas-Velidis}, {Brugaletta}, {Lorca}, {Ordenovic}, {Palicio},
+  {Sarro}, {Delchambre}, {Drimmel}, {Rybizki}, {Torralba Elipe}, {Korn},
+  {Recio-Blanco}, {Schultheis}, {De Angeli}, {Montegriffo}, {Abreu Aramburu},
+  {Accart}, {{\'A}lvarez}, {Bakker}, {Brouillet}, {Burlacu}, {Carballo},
+  {Casamiquela}, {Chiavassa}, {Contursi}, {Cooper}, {Dafonte}, {Dapergolas},
+  {de Laverny}, {Dharmawardena}, {Edvardsson}, {Le Fustec},
+  {Garc{\'\i}a-Lario}, {Garc{\'\i}a-Torres}, {Gomez},
+  {Gonz{\'a}lez-Santamar{\'\i}a}, {Hatzidimitriou}, {Jean-Antoine Piccolo},
+  {Kontizas}, {Kordopatis}, {Lanzafame}, {Lebreton}, {Licata}, {Lindstr{\o}m},
+  {Livanou}, {Magdaleno Romeo}, {Manteiga}, {Marocco}, {Marshall}, {Mary},
+  {Nicolas}, {Pallas-Quintela}, {Panem}, {Pichon}, {Poggio}, {Riclet}, {Robin},
+  {Santove{\~n}a}, {Silvelo}, {Slezak}, {Smart}, {Soubiran}, {S{\"u}veges},
+  {Ulla}, {Utrilla}, {Vallenari}, {Zhao}, {Zorec}, {Barrado}, {Bijaoui},
+  {Bouret}, {Blomme}, {Brott}, {Cassisi}, {Kochukhov}, {Martayan}, {Shulyak},
+  \& {Silvester}}]{Creevey2022}
+{Creevey}, O.~L., {Sordo}, R., {Pailler}, F., {et~al.} 2022, arXiv e-prints,
+  arXiv:2206.05864.
+\newblock \doarXiv{2206.05864}
 
 \bibitem[{Dierckx(1981)}]{Dierckx1981}
 Dierckx, P. 1981, IMA Journal of Numerical Analysis, 1, 267,
@@ -53,6 +99,17 @@ Dotter, A., Chaboyer, B., Jevremovi{\'c}, D., {et~al.} 2008, The Astrophysical
   Physics B Atomic Molecular Physics, 48, 144014,
   \dodoi{10.1088/0953-4075/48/14/144014}
 
+\bibitem[{{Gaia Collaboration} {et~al.}(2021){Gaia Collaboration}, {Smart},
+  {Sarro}, {Rybizki}, {Reyl{\'e}}, {Robin}, {Hambly}, {Abbas}, {Barstow}, {de
+  Bruijne}, \& et~al.}]{GaiaCollaboration2021}
+{Gaia Collaboration}, {Smart}, R.~L., {Sarro}, L.~M., {et~al.} 2021, \aap, 649,
+  A6, \dodoi{10.1051/0004-6361/202039498}
+
+\bibitem[{{Hakel} {et~al.}(2006){Hakel}, {Sherrill}, {Mazevet}, {Abdallah},
+  {Colgan}, {Kilcrease}, {Magee}, {Fontes}, \& {Zhang}}]{Hakel2006}
+{Hakel}, P., {Sherrill}, M.~E., {Mazevet}, S., {et~al.} 2006, \jqsrt, 99, 265,
+  \dodoi{10.1016/j.jqsrt.2005.04.007}
+
 \bibitem[{{Iglesias} \& {Rogers}(1996)}]{Iglesias1996}
 {Iglesias}, C.~A., \& {Rogers}, F.~J. 1996, \apj, 464, 943,
   \dodoi{10.1086/177381}
@@ -60,6 +117,10 @@ Dotter, A., Chaboyer, B., Jevremovi{\'c}, D., {et~al.} 2008, The Astrophysical
 \bibitem[{{Jao} \& {Feiden}(2020)}]{Jao2020}
 {Jao}, W.-C., \& {Feiden}, G.~A. 2020, \aj, 160, 102,
   \dodoi{10.3847/1538-3881/aba192}
+
+\bibitem[{{Jao} \& {Feiden}(2021)}]{Jao2021}
+---. 2021, Research Notes of the American Astronomical Society, 5, 124,
+  \dodoi{10.3847/2515-5172/ac053a}
 
 \bibitem[{{Jao} {et~al.}(2018){Jao}, {Henry}, {Gies}, \& {Hambly}}]{Jao2018}
 {Jao}, W.-C., {Henry}, T.~J., {Gies}, D.~R., \& {Hambly}, N.~C. 2018, \apjl,

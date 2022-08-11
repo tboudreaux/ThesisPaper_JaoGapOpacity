@@ -1,5 +1,5 @@
 \section{Modeling}\label{sec:modeling}
-In order to model the Jao Gap we evolve two extremly finely sampled mass grid
+In order to model the Jao Gap we evolve two extremely finely sampled mass grid
 of models. One of these grids uses the OPAL high-temperature opacity tables
 while the other uses the OPLIB tables (Figure \ref{fig:PunchIn}). Each grid
 evolves a model every 0.00025 $M_{\odot}$ from 0.2 to 0.4 $M_{\odot}$ and every
@@ -38,14 +38,14 @@ $M_{\odot} < M < 1 M_{\odot}$, $\alpha=-1.34\pm0.07$. The model nearest in mass
 to the samples mass above and the nearest model below are then selected from
 the evolved model database. The surface gravity, luminosity, and effective
 temperature of the sample are estimated from a linear interpolation between the
-upper and lower bounding models. $T_{eff}$, $g$, and $log(L)$ are transformed
-into Gaia G, BP, and RP magnitudes using the bolometric corrections provided by
-the Gaia Collaboration, specifically \texttt{fehp000.UBVRIplus}
-{\color{red}[CITATION]} {\color{red}[How to cite Aarons code]}. Next, we
+upper and lower bounding models. $T_{eff}$, $g$, and $\log(L)$ are transformed
+to Gaia G, BP, and RP magnitudes using the Gaia (E)DR3 bolometric corrections
+\citep{Creevey2022} along with code obtained thorough personal communication
+with Aaron Dotter {\color{red}[How to cite Aaron's color code?]}. Next, we
 introduce observationally informed photometric and astrometric uncertainties
 into our population.
 
-We select the Gaia Catalogue of Nearby Stars (GCNS) {\color{red}[CITATION]} to
+We select the Gaia Catalogue of Nearby Stars (GCNS) \citep{GaiaCollaboration2021} to
 empirically calibrate uncertainty relations. A function with the form of
 Equation \ref{eqn:plxCalib} is fit to parallax uncertainty vs. G magnitude.
 Additionally, a function of the form of Equation \ref{eqn:MagCalib} is fit to
@@ -114,9 +114,9 @@ using OPAL and OPLIB opacities are given in Figure
 \begin{figure*}
 	\centering
 	\includegraphics[width=0.85\textwidth]{src/figures/NotebookFigs/OPALOPLIB_popsynth_compare.pdf}
-	\caption{Population synthetis resulst for models evolved with OPAL (left)
-	and models evolved with OPLIB (right). A gaussian kernel-density-estimate
-	has been overlayed to better highlight the density variations. {\color{red}
+	\caption{Population synthesis results for models evolved with OPAL (left)
+	and models evolved with OPLIB (right). A Gaussian kernel-density-estimate
+	has been overlaid to better highlight the density variations. {\color{red}
 	[THIS IS A PLACEHOLDER FIGURE]}}
 	\label{fig:PopSynthCompareBasic}
 \end{figure*}
