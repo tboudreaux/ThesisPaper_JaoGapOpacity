@@ -33,8 +33,8 @@ Chandra, R.~V., \& Varanasi, B.~S. 2015, Python requests essentials (Packt
   Abstracts, Vol. 2016, APS Division of Atomic, Molecular and Optical Physics
   Meeting Abstracts, D1.008
 
-\bibitem[{DIERCKX(1981)}]{Dierckx1981}
-DIERCKX, P. 1981, IMA Journal of Numerical Analysis, 1, 267,
+\bibitem[{Dierckx(1981)}]{Dierckx1981}
+Dierckx, P. 1981, IMA Journal of Numerical Analysis, 1, 267,
   \dodoi{10.1093/imanum/1.3.267}
 
 \bibitem[{Dotter {et~al.}(2008)Dotter, Chaboyer, Jevremovi{\'c}, Kostov, Baron,
@@ -91,6 +91,15 @@ Richardson, L. 2007, April
   {Pradhan}}]{Seaton1994}
 {Seaton}, M.~J., {Yan}, Y., {Mihalas}, D., \& {Pradhan}, A.~K. 1994, \mnras,
   266, 805, \dodoi{10.1093/mnras/266.4.805}
+
+\bibitem[{{Skrutskie} {et~al.}(2006){Skrutskie}, {Cutri}, {Stiening},
+  {Weinberg}, {Schneider}, {Carpenter}, {Beichman}, {Capps}, {Chester},
+  {Elias}, {Huchra}, {Liebert}, {Lonsdale}, {Monet}, {Price}, {Seitzer},
+  {Jarrett}, {Kirkpatrick}, {Gizis}, {Howard}, {Evans}, {Fowler}, {Fullmer},
+  {Hurt}, {Light}, {Kopan}, {Marsh}, {McCallon}, {Tam}, {Van Dyk}, \&
+  {Wheelock}}]{Skrutskie2006}
+{Skrutskie}, M.~F., {Cutri}, R.~M., {Stiening}, R., {et~al.} 2006, \aj, 131,
+  1163, \dodoi{10.1086/498708}
 
 \bibitem[{Sollima(2019)}]{Sollima2019}
 Sollima, A. 2019, Monthly Notices of the Royal Astronomical Society, 489, 2377,

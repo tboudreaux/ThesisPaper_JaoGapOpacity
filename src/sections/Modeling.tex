@@ -1,46 +1,49 @@
 \section{Modeling}\label{sec:modeling}
 In order to model the Jao Gap we evolve two extremly finely sampled mass grid
 of models. One of these grids uses the OPAL high-temperature opacity tables
-while the other uses the OPLIB tables. Each grid evolves a model every 0.00025
-$M_{\odot}$ from 0.2 to 0.4 $M_{\odot}$ and every 0.005 $M_{\odot}$ from 0.4 to
-0.8 $M_{\odot}$. All models in both grids use a GS98 solar composition, the (1,
-101, 0) \texttt{Free\_EOS} (version {\color{red}2.7}) configuration, and 1000
-year old pre-main sequence polytropic models as their initial conditions.
+while the other uses the OPLIB tables (Figure \ref{fig:PunchIn}). Each grid
+evolves a model every 0.00025 $M_{\odot}$ from 0.2 to 0.4 $M_{\odot}$ and every
+0.005 $M_{\odot}$ from 0.4 to 0.8 $M_{\odot}$. All models in both grids use a
+GS98 solar composition, the (1, 101, 0) \texttt{Free\_EOS} (version
+{\color{red}2.7}) configuration, and 1000 year old pre-main sequence polytropic
+models, with polytropic index 1.5, as their initial conditions.
 
 Because in this work we are just interested in the location shift of the gap as
 the opacity source varies, we do not model variations in composition.
-{\color{red} Others have done this and they have found blah....}
-
-The variability leading to the gap is quite clear in the mass luminosity
-relation (Figures \ref{fig:OPALPunchIn} \& \ref{fig:OPLIBPunchIn}
-{\color{red} Make this figure for the two large runs})
+\citet{Mansfield2021,Jao2020,Feiden2021} all look at the effect composition has
+on Jao Gap location. They find that as population metallicity increase so to
+does the mass range and consequently the magnitude of the Gap. From an extremely
+low metallicity population (Z=0.001) to a population with a more solar like
+metallicity this shift in mass range can be up to 0.05 M$_{\odot}$
+\citep{Mansfield2021}.
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.45\textwidth]{src/figures/NotebookFigs/OPALPunchIn.pdf}
-	\caption{{\color{red} THIS IS A TEST FIGURE, REPLACE WHEN LARGE RUN IS DONE}}
-	\label{fig:OPALPunchIn}
 	\includegraphics[width=0.45\textwidth]{src/figures/NotebookFigs/OPALPunchIn.pdf}
-	\caption{{\color{red} THIS IS A TEST FIGURE, REPLACE WHEN LARGE RUN IS DONE}}
-	\label{fig:OPLIBPunchIn}
+	\caption{Mass-luminosity relation for models evolved using OPAL opacity
+	tables (top) and those evolved using OPLIB opacity tables (bottom)
+	{\color{red}[UPDATE OPLIB FIG WHEN MODELS DONE]}. Note the lower mass range
+	of the OPLIB Gap.}
+	\label{fig:PunchIn}
 		
 \end{figure}
 
 \subsection{Population Synthethis}
 In order to compare the gap to observations we use in house population
-synthetis code. Our population synthetis code first uses inverse CDF sampling
+synthesis code. Our population synthesis code first uses inverse CDF sampling
 to build a distribution of target masses from some initial mass function (IMF).
-Specifically we use the \citeauthor{Sollima2019} IMF where, for masses 0.25
-$M_{\odot}$ < $M$ < 1 $M_{\odot}$, $\alpha=-1.34\pm0.07$. The model nearest in
-mass to the samples mass above and the nearest model below are then selected
-from the evolved database. The surface gravity, luminosity, and effective
-temperature of the sample are then estimated through computing a linear
-interpolation between the bounding models and evaluating that interpolation at
-the sample mass. $T_{eff}$, $g$, and $log(L)$ are transformed into Gaia G, BP,
-and RP magnitudes using the bolometric corrections provided by the Gaia
-Colaboration, specifically \texttt{fehp000.UBVRIplus} {\color{red}[CITATION]}
-{\color{red}[How to cite Aarons code]}. Next, we introduce observationally
-informed photometric and astrometric Uncertainties into our population.
+Specifically we use the \citet{Sollima2019} IMF where, for masses 0.25
+$M_{\odot} < M < 1 M_{\odot}$, $\alpha=-1.34\pm0.07$. The model nearest in mass
+to the samples mass above and the nearest model below are then selected from
+the evolved model database. The surface gravity, luminosity, and effective
+temperature of the sample are estimated from a linear interpolation between the
+upper and lower bounding models. $T_{eff}$, $g$, and $log(L)$ are transformed
+into Gaia G, BP, and RP magnitudes using the bolometric corrections provided by
+the Gaia Collaboration, specifically \texttt{fehp000.UBVRIplus}
+{\color{red}[CITATION]} {\color{red}[How to cite Aarons code]}. Next, we
+introduce observationally informed photometric and astrometric uncertainties
+into our population.
 
 We select the Gaia Catalogue of Nearby Stars (GCNS) {\color{red}[CITATION]} to
 empirically calibrate uncertainty relations. A function with the form of
@@ -64,21 +67,22 @@ magnitude.
 	\label{fig:pdist}
 \end{figure}
 
-Each of these functions then gives the an estimated uncertainty of some
-quantity at a given magnitude. For each sampled star in the synthetic
-population we sample a parallax from the parallax distribution of the GCNS
-(Figure \ref{fig:pdist}), refered to as the ''true parallax''. A parallax
-uncertainty is calculated based on the G magnitude magnitude of the synthetic
-star (hereafter the ``true G magnitude) and the results of the fitting
-described in the previous paragraph. This uncertainty then will, with equal
-weighting, either be added or subtracted from the true parallax, yeilding an
-``observed parallax''. The true parallax will be used to convert the true
-i$^{\text{th}}$ magnitude to an apparent i$^{\text{th}}$ magnitude and the
-observed parallax will be used to convert the apparent i$^{\text{th}}$
-magnitude into an observed i$^{\text{th}}$ magnitude. Finally, each observed
-magnitude is summed with an estimated uncertainty for that magnitude based on
-the fit of the i$^{\text{th}}$ magnitude to the uncertainty in the
-i$^{\text{th}}$ magnitude.
+Each of these functions estimates the uncertainty of some quantity at a given
+magnitude. Moreover, for each sampled in the synthetic population we sample a
+parallax from the distribution in the GCNS (Figure \ref{fig:pdist}), referred
+to as the ``true parallax''. A parallax uncertainty is calculated based on the
+empirically calibrated parallax uncertainty and G-magnitude relation along with
+the synthetic stars G-magnitude (hereafter the ``true G magnitude) and the
+results of the fitting described in the previous paragraph. This uncertainty
+is then, with equal weighting, either be added or subtracted from the true
+Parallax, yielding an ``observed parallax''.
+
+The true parallax is used to convert the true i$^{\text{th}}$ magnitude to an
+apparent i$^{\text{th}}$ magnitude and the observed parallax is used to convert
+the apparent i$^{\text{th}}$ magnitude into an observed i$^{\text{th}}$
+magnitude. Finally, each observed magnitude is summed with an estimated
+photometric uncertainty for that magnitude based on the fit of the
+i$^{\text{th}}$ magnitude to the uncertainty in the i$^{\text{th}}$ magnitude.
 
 To summarize the process that each synthetic star will go through
 \begin{enumerate}
@@ -102,9 +106,10 @@ To summarize the process that each synthetic star will go through
 		scale.
 \end{enumerate}
 
-This method then incorperats both photometric and astrometric Uncertainties
-into our population synthetis. Seven Gyr old synthetic populations using OPAL
-and OPLIB opacities are given in Figure \ref{fig:PopSynthCompareBasic}.
+This method then incorporates both photometric and astrometric uncertainties
+into our population synthesis. An example seven Gyr old synthetic populations
+using OPAL and OPLIB opacities are given in Figure
+\ref{fig:PopSynthCompareBasic}.
 
 \begin{figure*}
 	\centering
