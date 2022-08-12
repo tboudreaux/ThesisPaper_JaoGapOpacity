@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2020.1.21)  12 AUG 2022 08:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2020.1.21)  12 AUG 2022 09:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -673,24 +673,29 @@ File: src/figures/NotebookFigs/OPALPunchIn.pdf Graphic file (type pdf)
 Package pdftex.def Info: src/figures/NotebookFigs/OPALPunchIn.pdf  used on inpu
 t line 22.
 (pdftex.def)             Requested size: 230.90128pt x 210.9256pt.
-File: src/figures/NotebookFigs/OPALPunchIn.pdf Graphic file (type pdf)
-<use src/figures/NotebookFigs/OPALPunchIn.pdf>
-Package pdftex.def Info: src/figures/NotebookFigs/OPALPunchIn.pdf  used on inpu
-t line 23.
-(pdftex.def)             Requested size: 230.90128pt x 210.9256pt.
+<src/figures/NotebookFigs/OPLIBPunchIn.pdf, id=275, 658.30984pt x 611.02657pt>
+File: src/figures/NotebookFigs/OPLIBPunchIn.pdf Graphic file (type pdf)
+<use src/figures/NotebookFigs/OPLIBPunchIn.pdf>
+Package pdftex.def Info: src/figures/NotebookFigs/OPLIBPunchIn.pdf  used on inp
+ut line 23.
+(pdftex.def)             Requested size: 230.90128pt x 214.31935pt.
  [5 <./src/figures/HRDiagramOPALvsOPLIB_SCCM.pdf> <./src/figures/NotebookFigs/O
 PALPunchIn.pdf
 
 pdfTeX warning: pdflatex (file ./src/figures/NotebookFigs/OPALPunchIn.pdf): PDF
  inclusion: multiple pdfs with page group included in a single page
+> <./src/figures/NotebookFigs/OPLIBPunchIn.pdf
+
+pdfTeX warning: pdflatex (file ./src/figures/NotebookFigs/OPLIBPunchIn.pdf): PD
+F inclusion: multiple pdfs with page group included in a single page
 >]
-<src/figures/NotebookFigs/pdist.pdf, id=322, 722.7pt x 722.7pt>
+<src/figures/NotebookFigs/pdist.pdf, id=337, 722.7pt x 722.7pt>
 File: src/figures/NotebookFigs/pdist.pdf Graphic file (type pdf)
 <use src/figures/NotebookFigs/pdist.pdf>
 Package pdftex.def Info: src/figures/NotebookFigs/pdist.pdf  used on input line
  64.
 (pdftex.def)             Requested size: 230.90128pt x 230.89378pt.
-<src/figures/NotebookFigs/OPALOPLIB_popsynth_compare.pdf, id=329, 1251.48045pt 
+<src/figures/NotebookFigs/OPALOPLIB_popsynth_compare.pdf, id=344, 1251.48045pt 
 x 476.70503pt>
 File: src/figures/NotebookFigs/OPALOPLIB_popsynth_compare.pdf Graphic file (typ
 e pdf)
@@ -699,21 +704,21 @@ Package pdftex.def Info: src/figures/NotebookFigs/OPALOPLIB_popsynth_compare.pd
 f  used on input line 116.
 (pdftex.def)             Requested size: 436.15294pt x 166.13641pt.
 ) (./src/sections/Results.tex [6 <./src/figures/NotebookFigs/pdist.pdf>]
-<src/figures/NotebookFigs/OPAL_Jao_locator.png, id=364, 680.7834pt x 657.29565p
+<src/figures/NotebookFigs/OPAL_Jao_locator.png, id=380, 680.7834pt x 657.29565p
 t>
 File: src/figures/NotebookFigs/OPAL_Jao_locator.png Graphic file (type png)
 <use src/figures/NotebookFigs/OPAL_Jao_locator.png>
 Package pdftex.def Info: src/figures/NotebookFigs/OPAL_Jao_locator.png  used on
  input line 39.
 (pdftex.def)             Requested size: 230.90128pt x 222.92593pt.
-<src/figures/NotebookFigs/OPLIB_Jao_locator.png, id=365, 680.7834pt x 657.29565
+<src/figures/NotebookFigs/OPLIB_Jao_locator.png, id=381, 680.7834pt x 657.29565
 pt>
 File: src/figures/NotebookFigs/OPLIB_Jao_locator.png Graphic file (type png)
 <use src/figures/NotebookFigs/OPLIB_Jao_locator.png>
 Package pdftex.def Info: src/figures/NotebookFigs/OPLIB_Jao_locator.png  used o
 n input line 40.
 (pdftex.def)             Requested size: 230.90128pt x 222.92593pt.
-<src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf, id=367, 722.7pt x 722.7pt>
+<src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf, id=383, 722.7pt x 722.7pt>
 File: src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf Graphic file (type pdf)
 <use src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf>
 Package pdftex.def Info: src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf  used on in
@@ -749,7 +754,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
 
-<src/figures/FractionalDifference.pdf, id=421, 533.75356pt x 457.65639pt>
+<src/figures/FractionalDifference.pdf, id=437, 533.75356pt x 457.65639pt>
 File: src/figures/FractionalDifference.pdf Graphic file (type pdf)
 <use src/figures/FractionalDifference.pdf>
 Package pdftex.def Info: src/figures/FractionalDifference.pdf  used on input li
@@ -765,10 +770,10 @@ Package rerunfilecheck Info: File `JaoGapOpacityUpdate.out' has not changed.
 (rerunfilecheck)             Checksum: CDFBBD0748EC17571D7AFA0B303704AD;615.
  ) 
 Here is how much of TeX's memory you used:
- 9823 strings out of 492641
- 136433 string characters out of 6131787
- 331349 words of memory out of 5000000
- 13464 multiletter control sequences out of 15000+600000
+ 9828 strings out of 492641
+ 136656 string characters out of 6131787
+ 331406 words of memory out of 5000000
+ 13468 multiletter control sequences out of 15000+600000
  16316 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  35i,12n,37p,1243b,447s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -798,10 +803,10 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/helvetic/uhvr8a.pfb>
-Output written on JaoGapOpacityUpdate.pdf (10 pages, 3879147 bytes).
+Output written on JaoGapOpacityUpdate.pdf (10 pages, 3995475 bytes).
 PDF statistics:
- 579 PDF objects out of 1000 (max. 8388607)
- 510 compressed objects within 6 object streams
+ 595 PDF objects out of 1000 (max. 8388607)
+ 523 compressed objects within 6 object streams
  86 named destinations out of 1000 (max. 500000)
- 144 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 149 words of extra memory for PDF output out of 10000 (max. 10000000)
 
