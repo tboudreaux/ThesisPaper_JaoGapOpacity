@@ -7,27 +7,27 @@
 % \citep{Huebner2014}. Local Thermodynamic Equilibrium (LTE) is a common state to
 % find within a star and therefore stellar models have long relied on opacities
 % calculated in LTE.
-Multiple groups have released high-temperature opacities including the Opacity
+Multiple groups have released high-temperature opacities including, the Opacity
 Project \citep[OP][]{Seaton1994}, Laurence Livermore National Labs OPAL opacity
 tables \citep{Iglesias1996}, and Los Alamos National Labs OPLIB opacity tables
 \citep{Colgan2016}. OPAL high-temperature radiative opacity tables in
 particular are very widely used by current generation isochrone grids
 \citep[e.g. Dartmouth, MIST, \& StarEvol, ][]{Dotter2008,Choi2016,Amard2019}.
-However, they are relatively old and therefore do not incorporate the most up to
-date understanding of plasma modeling in their code \citep{Colgan2016}
+However, they are relatively old and therefore do not incorporate the most
+up-to-date understanding of plasma modeling in their code \citep{Colgan2016}
 
-While the two issues given above should  have quite small effects on the CMD as
-a whole, the strong theoretical opacity dependence of the Jao Gap raises the
-potential for these small effects to measurably shift the gap's location. We
-update DSEP to use high temperature opacity tables based on measurements from
-Los Alamos national Labs T-1 group \citep[OPLIB,][]{Colgan2016}. The OPLIB
-tables use the ATOMIC. ATOMIC \citep{Magee2004,Hakel2006,Fontes2016} is a
-modern LTE and non-LTE opacity and plasma modeling code which was used to
-generate opacity tables in an attempt to resolve the discrepancy between
-helioseismic and solar model predictions of chemical abundances in the sun
-\citep{Bahcall2005}. For a detailed breakdown of how the most up-to-date set of
-OPLIB tables are generated see \citep{Colgan2013a, Colgan2013b, Colgan2015,
-Colgan2016}.
+While the overall effect on the CMD of using OPLIB compared to OPAL
+tables is small, the strong theoretical opacity dependence of the Jao Gap
+raises the potential for these small effects to measurably shift the Gap's
+location. We update DSEP to use high temperature opacity tables based on
+measurements from Los Alamos national Labs T-1 group
+\citep[OPLIB,][]{Colgan2016}. The OPLIB tables use the ATOMIC. ATOMIC
+\citep{Magee2004,Hakel2006,Fontes2016} is a modern LTE and non-LTE opacity and
+plasma modeling code which was used to generate opacity tables in an attempt to
+resolve the discrepancy between helioseismic and solar model predictions of
+chemical abundances in the sun \citep{Bahcall2005}. For a detailed breakdown of
+how the most up-to-date set of OPLIB tables are generated see
+\citep{Colgan2013a, Colgan2013b, Colgan2015, Colgan2016}.
 
 OPLIB tables include monochromatic Rosseland mean opacities --- composed from
 bound-bound, bound-free, free-free, and scattering opacities --- for elements
@@ -38,7 +38,7 @@ temperature).
 
 When comparing OPAL and OPLIB opacity tables (Figure \ref{fig:opacComp}) we
 find OPLIB opacities are systematically lower than OPAL opacities for
-temperature above $10^{6}$ K. These lower opacities will decrease the radiative
+temperatures above $10^{6}$ K. These lower opacities will decrease the radiative
 temperature gradient. Consequently, the radiative layer in a stellar model
 evolved using OPLIB opacity tables should be closer into the model core than it
 would be in models making use of OPAL tables.
@@ -77,9 +77,9 @@ tables easily and quickly we develop a web scraper built with Python's
 \texttt{requests} module in addition to the 3rd party \texttt{mechanize} and
 \texttt{BeautifulSoup} modules \citep{chandra2015python,
 richardson2007beautiful} which can automatically retrieve all the tables needed
-to build an opacity table DSEP can make use of. This web scraper submits a user
+to build an opacity table that DSEP can make use of. This web scraper submits a user
 requested chemical composition (composed of mass fractions for elements from
-Hydrogen to Zinc) to the Los Alamos web form, selects 0.0005 keV as the lower
+hydrogen to zinc) to the Los Alamos web form, selects 0.0005 keV as the lower
 temperature bound and 60 keV as the upper temperature bound, and finally
 requests opacity measurements for 100 densities, ranging from $1.77827941\times
 10 ^{-15}$ [g cm$^{-3}$] up to $1\times10^{7}$ [g cm$^{-3}$], at each
