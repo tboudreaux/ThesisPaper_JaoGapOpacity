@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2020.1.21)  12 AUG 2022 16:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2020.1.21)  17 AUG 2022 11:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -704,20 +704,18 @@ Package pdftex.def Info: src/figures/NotebookFigs/OPALOPLIB_popsynth_compare.pd
 f  used on input line 115.
 (pdftex.def)             Requested size: 436.15294pt x 166.95836pt.
 ) (./src/sections/Results.tex [6 <./src/figures/NotebookFigs/pdist.pdf>]
-<src/figures/NotebookFigs/OPAL_Jao_locator.png, id=380, 680.7834pt x 657.29565p
-t>
+<src/figures/NotebookFigs/OPAL_Jao_locator.png, id=380, 722.7pt x 722.7pt>
 File: src/figures/NotebookFigs/OPAL_Jao_locator.png Graphic file (type png)
 <use src/figures/NotebookFigs/OPAL_Jao_locator.png>
 Package pdftex.def Info: src/figures/NotebookFigs/OPAL_Jao_locator.png  used on
  input line 38.
-(pdftex.def)             Requested size: 230.90128pt x 222.92593pt.
-<src/figures/NotebookFigs/OPLIB_Jao_locator.png, id=381, 680.7834pt x 657.29565
-pt>
+(pdftex.def)             Requested size: 225.77292pt x 225.76599pt.
+<src/figures/NotebookFigs/OPLIB_Jao_locator.png, id=381, 722.7pt x 722.7pt>
 File: src/figures/NotebookFigs/OPLIB_Jao_locator.png Graphic file (type png)
 <use src/figures/NotebookFigs/OPLIB_Jao_locator.png>
 Package pdftex.def Info: src/figures/NotebookFigs/OPLIB_Jao_locator.png  used o
 n input line 39.
-(pdftex.def)             Requested size: 230.90128pt x 222.92593pt.
+(pdftex.def)             Requested size: 225.77292pt x 225.76599pt.
 <src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf, id=383, 722.7pt x 722.7pt>
 File: src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf Graphic file (type pdf)
 <use src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf>
@@ -773,7 +771,7 @@ Package rerunfilecheck Info: File `JaoGapOpacityUpdate.out' has not changed.
 Here is how much of TeX's memory you used:
  9828 strings out of 492641
  136656 string characters out of 6131787
- 331406 words of memory out of 5000000
+ 331392 words of memory out of 5000000
  13468 multiletter control sequences out of 15000+600000
  16316 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -804,7 +802,7 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/helvetic/uhvr8a.pfb>
-Output written on JaoGapOpacityUpdate.pdf (10 pages, 3994151 bytes).
+Output written on JaoGapOpacityUpdate.pdf (10 pages, 3033383 bytes).
 PDF statistics:
  595 PDF objects out of 1000 (max. 8388607)
  523 compressed objects within 6 object streams
