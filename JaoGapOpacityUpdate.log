@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2020.1.21)  17 AUG 2022 12:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2020.1.21)  17 AUG 2022 13:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -638,25 +638,28 @@ Underfull \hbox (badness 3039) in paragraph at lines 32--38
  []
 
 [3 <./src/figures/NotebookFigs/Kippenhan.pdf>]
-<src/figures/OpacityComparision.pdf, id=230, 927.61877pt x 775.82573pt>
-File: src/figures/OpacityComparision.pdf Graphic file (type pdf)
-<use src/figures/OpacityComparision.pdf>
-Package pdftex.def Info: src/figures/OpacityComparision.pdf  used on input line
- 48.
-(pdftex.def)             Requested size: 230.90128pt x 193.11545pt.
+<src/figures/NotebookFigs/OpacityComparision.pdf, id=230, 677.25299pt x 651.096
+98pt>
+File: src/figures/NotebookFigs/OpacityComparision.pdf Graphic file (type pdf)
+<use src/figures/NotebookFigs/OpacityComparision.pdf>
+Package pdftex.def Info: src/figures/NotebookFigs/OpacityComparision.pdf  used 
+on input line 48.
+(pdftex.def)             Requested size: 230.90128pt x 221.97607pt.
 
 Overfull \hbox (10.88353pt too wide) in paragraph at lines 75--75
 [][]| [] [][][]| 
  []
 
 ) (./src/sections/SSCM.tex
-<src/figures/HRDiagramOPALvsOPLIB_SCCM.pdf, id=237, 925.66647pt x 776.74934pt>
-File: src/figures/HRDiagramOPALvsOPLIB_SCCM.pdf Graphic file (type pdf)
-<use src/figures/HRDiagramOPALvsOPLIB_SCCM.pdf>
-Package pdftex.def Info: src/figures/HRDiagramOPALvsOPLIB_SCCM.pdf  used on inp
-ut line 35.
-(pdftex.def)             Requested size: 230.90128pt x 193.74832pt.
- [4 <./src/figures/OpacityComparision.pdf>]
+<src/figures/NotebookFigs/HRDiagramOPALvsOPLIB_SCCM.pdf, id=237, 660.73338pt x 
+619.57295pt>
+File: src/figures/NotebookFigs/HRDiagramOPALvsOPLIB_SCCM.pdf Graphic file (type
+ pdf)
+<use src/figures/NotebookFigs/HRDiagramOPALvsOPLIB_SCCM.pdf>
+Package pdftex.def Info: src/figures/NotebookFigs/HRDiagramOPALvsOPLIB_SCCM.pdf
+  used on input line 35.
+(pdftex.def)             Requested size: 230.90128pt x 216.51344pt.
+ [4 <./src/figures/NotebookFigs/OpacityComparision.pdf>]
 
 LaTeX Warning: A float is stuck (cannot be placed) on input line 50.
 
@@ -667,20 +670,20 @@ LaTeX Warning: A float is stuck (cannot be placed) on input line 50.
 Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
 
 ) (./src/sections/Modeling.tex
-<src/figures/NotebookFigs/OPALPunchIn.pdf, id=274, 668.9019pt x 611.02657pt>
+<src/figures/NotebookFigs/OPALPunchIn.pdf, id=279, 668.9019pt x 611.02657pt>
 File: src/figures/NotebookFigs/OPALPunchIn.pdf Graphic file (type pdf)
 <use src/figures/NotebookFigs/OPALPunchIn.pdf>
 Package pdftex.def Info: src/figures/NotebookFigs/OPALPunchIn.pdf  used on inpu
 t line 22.
 (pdftex.def)             Requested size: 230.90128pt x 210.9256pt.
-<src/figures/NotebookFigs/OPLIBPunchIn.pdf, id=275, 658.30984pt x 611.02657pt>
+<src/figures/NotebookFigs/OPLIBPunchIn.pdf, id=280, 658.30984pt x 611.02657pt>
 File: src/figures/NotebookFigs/OPLIBPunchIn.pdf Graphic file (type pdf)
 <use src/figures/NotebookFigs/OPLIBPunchIn.pdf>
 Package pdftex.def Info: src/figures/NotebookFigs/OPLIBPunchIn.pdf  used on inp
 ut line 23.
 (pdftex.def)             Requested size: 230.90128pt x 214.31935pt.
- [5 <./src/figures/HRDiagramOPALvsOPLIB_SCCM.pdf> <./src/figures/NotebookFigs/O
-PALPunchIn.pdf
+ [5 <./src/figures/NotebookFigs/HRDiagramOPALvsOPLIB_SCCM.pdf> <./src/figures/N
+otebookFigs/OPALPunchIn.pdf
 
 pdfTeX warning: pdflatex (file ./src/figures/NotebookFigs/OPALPunchIn.pdf): PDF
  inclusion: multiple pdfs with page group included in a single page
@@ -689,34 +692,36 @@ pdfTeX warning: pdflatex (file ./src/figures/NotebookFigs/OPALPunchIn.pdf): PDF
 pdfTeX warning: pdflatex (file ./src/figures/NotebookFigs/OPLIBPunchIn.pdf): PD
 F inclusion: multiple pdfs with page group included in a single page
 >]
-<src/figures/NotebookFigs/pdist.pdf, id=338, 722.7pt x 722.7pt>
+<src/figures/NotebookFigs/pdist.pdf, id=342, 722.7pt x 722.7pt>
 File: src/figures/NotebookFigs/pdist.pdf Graphic file (type pdf)
 <use src/figures/NotebookFigs/pdist.pdf>
 Package pdftex.def Info: src/figures/NotebookFigs/pdist.pdf  used on input line
  63.
 (pdftex.def)             Requested size: 230.90128pt x 230.89378pt.
-<src/figures/NotebookFigs/OPALOPLIB_popsynth_compare.pdf, id=345, 1245.28911pt 
+<src/figures/NotebookFigs/OPALOPLIB_popsynth_compare.pdf, id=349, 1251.48045pt 
 x 476.70503pt>
 File: src/figures/NotebookFigs/OPALOPLIB_popsynth_compare.pdf Graphic file (typ
 e pdf)
 <use src/figures/NotebookFigs/OPALOPLIB_popsynth_compare.pdf>
 Package pdftex.def Info: src/figures/NotebookFigs/OPALOPLIB_popsynth_compare.pd
 f  used on input line 115.
-(pdftex.def)             Requested size: 436.15294pt x 166.95836pt.
+(pdftex.def)             Requested size: 436.15294pt x 166.13641pt.
 ) (./src/sections/Results.tex [6 <./src/figures/NotebookFigs/pdist.pdf>]
-<src/figures/NotebookFigs/OPAL_Jao_locator.png, id=380, 722.7pt x 722.7pt>
-File: src/figures/NotebookFigs/OPAL_Jao_locator.png Graphic file (type png)
-<use src/figures/NotebookFigs/OPAL_Jao_locator.png>
-Package pdftex.def Info: src/figures/NotebookFigs/OPAL_Jao_locator.png  used on
+<src/figures/NotebookFigs/OPAL_Jao_locator.pdf, id=385, 681.01828pt x 657.52058
+pt>
+File: src/figures/NotebookFigs/OPAL_Jao_locator.pdf Graphic file (type pdf)
+<use src/figures/NotebookFigs/OPAL_Jao_locator.pdf>
+Package pdftex.def Info: src/figures/NotebookFigs/OPAL_Jao_locator.pdf  used on
  input line 38.
-(pdftex.def)             Requested size: 225.77292pt x 225.76599pt.
-<src/figures/NotebookFigs/OPLIB_Jao_locator.png, id=381, 722.7pt x 722.7pt>
-File: src/figures/NotebookFigs/OPLIB_Jao_locator.png Graphic file (type png)
-<use src/figures/NotebookFigs/OPLIB_Jao_locator.png>
-Package pdftex.def Info: src/figures/NotebookFigs/OPLIB_Jao_locator.png  used o
+(pdftex.def)             Requested size: 230.90128pt x 222.93199pt.
+<src/figures/NotebookFigs/OPLIB_Jao_locator.pdf, id=386, 681.01828pt x 657.5205
+8pt>
+File: src/figures/NotebookFigs/OPLIB_Jao_locator.pdf Graphic file (type pdf)
+<use src/figures/NotebookFigs/OPLIB_Jao_locator.pdf>
+Package pdftex.def Info: src/figures/NotebookFigs/OPLIB_Jao_locator.pdf  used o
 n input line 39.
-(pdftex.def)             Requested size: 225.77292pt x 225.76599pt.
-<src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf, id=383, 722.7pt x 722.7pt>
+(pdftex.def)             Requested size: 230.90128pt x 222.93199pt.
+<src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf, id=388, 722.7pt x 722.7pt>
 File: src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf Graphic file (type pdf)
 <use src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf>
 Package pdftex.def Info: src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf  used on in
@@ -750,16 +755,23 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
 
-[8 <./src/figures/NotebookFigs/OPAL_Jao_locator.png> <./src/figures/NotebookFig
-s/OPLIB_Jao_locator.png> <./src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf>]
-<src/figures/FractionalDifference.pdf, id=437, 533.75356pt x 457.65639pt>
+[8 <./src/figures/NotebookFigs/OPAL_Jao_locator.pdf> <./src/figures/NotebookFig
+s/OPLIB_Jao_locator.pdf
+
+pdfTeX warning: pdflatex (file ./src/figures/NotebookFigs/OPLIB_Jao_locator.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <./src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf
+
+pdfTeX warning: pdflatex (file ./src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
+>]
+<src/figures/FractionalDifference.pdf, id=479, 533.75356pt x 457.65639pt>
 File: src/figures/FractionalDifference.pdf Graphic file (type pdf)
 <use src/figures/FractionalDifference.pdf>
 Package pdftex.def Info: src/figures/FractionalDifference.pdf  used on input li
 ne 41.
 (pdftex.def)             Requested size: 230.90128pt x 197.97557pt.
-)
-(./JaoGapOpacityUpdate.bbl [9 <./src/figures/FractionalDifference.pdf>])
+) (./JaoGapOpacityUpdate.bbl [9 <./src/figures/FractionalDifference.pdf>])
 [10]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 90.
  (./JaoGapOpacityUpdate.aux)
@@ -770,8 +782,8 @@ Package rerunfilecheck Info: File `JaoGapOpacityUpdate.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  9828 strings out of 492641
- 136656 string characters out of 6131787
- 331392 words of memory out of 5000000
+ 136808 string characters out of 6131787
+ 331408 words of memory out of 5000000
  13468 multiletter control sequences out of 15000+600000
  16316 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -781,31 +793,33 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/urw/helvetic/uhvr8a.pfb>
-Output written on JaoGapOpacityUpdate.pdf (10 pages, 3653114 bytes).
+public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helv
+etic/uhvr8a.pfb>
+Output written on JaoGapOpacityUpdate.pdf (10 pages, 2410990 bytes).
 PDF statistics:
- 595 PDF objects out of 1000 (max. 8388607)
- 523 compressed objects within 6 object streams
+ 639 PDF objects out of 1000 (max. 8388607)
+ 560 compressed objects within 6 object streams
  86 named destinations out of 1000 (max. 500000)
  149 words of extra memory for PDF output out of 10000 (max. 10000000)
 
