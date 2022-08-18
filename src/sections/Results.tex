@@ -1,37 +1,41 @@
 \section{Results}\label{sec:results}
-We quantify the Jao Gap location along the magnitude axis by sub-sampling our
-synthetic populations, finding the linear number density along the magnitude
-axis of each sub-sample, averaging these linear number densities, and
-extracting any peaks above a prominence threshold of 0.1 as potential
-magnitudes of the Jao Gap. Figure \ref{fig:JaoGapLocator} shows this fit for
-both OPAL and OPLIB populations.
+We quantify the Jao Gap location along the magnitude (Table
+\ref{tab:GapLocation}) axis by sub-sampling our synthetic populations, finding
+the linear number density along the magnitude axis of each sub-sample,
+averaging these linear number densities, and extracting any peaks above a
+prominence threshold of 0.1 as potential magnitudes of the Jao Gap (Figure
+\ref{fig:JaoGapLocator}). Gap widths are measuredat 50\% the height of the peak
+prominence. We use the python package \texttt{scipy} \citep{2020SciPy-NMeth} to
+both identify peaks and measure their widths. 
 
 \begin{table}
 	\centering
-	\begin{tabular}{c | c c}
+	\begin{tabular}{c | c c c}
 		\hline
-		Model & Location & Prominence \\
+		Model & Location & Prominence & Width\\
 		\hline
 		\hline
-		OPAL & 10.15864 & 0.19501 \\
-		OPLIB 1 & 10.17813 & 0.26055 \\
-		OPLIB 2 & 10.21313 & 0.46898
+		OPAL 1 & 10.138 & 0.593 & 0.027 \\
+		OPAL 2 & 10.183 & 0.529 & 0.023 \\
+		OPLIB 1 & 10.188 & 0.724 & 0.032 \\
+		OPLIB 2 & 10.233 & 0.386 & 0.027 
 	\end{tabular}
 	\caption{Locations identified as potential Gaps.}
 	\label{tab:GapLocation}
 \end{table}
 
-Our Gap identification method finds two potential Gaps in the OPLIB (Table
-\ref{tab:GapLocation}) data while only finding one in the OPAL dataset. This
-apparent discrepancy is not due to a fundamental structural difference between
-the OPAL and OPLIB opacity tables; rather, it is attributable to the
-phasing of the periodic luminosity variations seen across mass in Figure
-\ref{fig:PunchIn} and whether or not the
-injected noise smears all of these together into one Gap or two Gaps.
-
-{\color{red} [There will be text detailing a test where I manually shift the
-OPAL data to the same phase as the OPLIB in an attempt to explain the extra Gap
-seen in OPLIB]}.
+In both OPAL and OPLIB synthetic populations our Gap identification method
+finds two gaps above the prominence threshold. The identification of more than
+one gap is not inconsistent with the mass-luminosity relation seen in the grids
+we evolve. As noise is injected into a synthetic population smaller features will
+be smeared out while larger ones will tend to persist. The mass-luminosity
+relations showin in Figure \ref{fig:PunchIn} make it clear that there are: (1),
+multiple gaps due to stars of different masses undergoing convective mixing
+events at different ages, and (2), the gaps decrease in width moving to lower
+masses / redder. Therefore, the multiple gaps we identify are attributable to
+the two bluest gaps being wide enough to not smear out with noise. In fact, if
+we lower the prominence threshold just slightly from 0.1 to 0.09 we detect a
+third gap in both the OPAL and OPLIB datasets where one would be expected.
 
 \begin{figure}
 	\centering
@@ -45,17 +49,18 @@ seen in OPLIB]}.
 	\label{fig:JaoGapLocator}
 \end{figure}
 
-Both Gaps identified in the OPLIB sample are at fainter magnitudes than the Gap
-identified in the OPAL sample. Consequently, in the OPLIB sample the
+The mean gap location of the OPLIB population is at a faiter magnitude than the
+mean gap location of the OPAL population. Consequently, in the OPLIB sample the
 convective mixing events which drive the kissing instability happen more
 regularly and therefore also start earlier in the model's evolution. This is
 because each mixing event serves to interrupt the ``standard'' luminosity
 evolution of a stellar model, kicking its luminosity back down to what it would
-have been at some earlier stage of stellar evolution instead of allowing it
-to slowly increase.
+have been at some earlier stage of stellar evolution instead of allowing it to
+slowly increase.
 % Looking at the interior physics of one OPAL and one OPLIB
 % model shows that this shorter duration between mixing events (Figure
 % \ref{fig:OPALOPLIB3He}).
+
 
 Convective mixing events starting earlier in a model's evolution are consistent
 with the slightly lower opacities characteristic to OPLIB. A lower opacity
@@ -71,15 +76,6 @@ OPLIB models undergo convective mixing events earlier in their evolution than
 OPAL models (Figure \ref{fig:OPALOPLIB3He}) implying that the inner convective
 zone did not have to expand as much to meet the outer convective zone. 
 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.45\textwidth]{src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf}
-	\caption{Core $^{3}$He mass fraction for a model evolved with OPAL and a
-	model evolved with OPLIB within the Jao Gap's mass range. Note how the
-	OPLIB model undergoes the mixing event earlier in its evolution than the
-	OPAL model does.}
-	\label{fig:OPALOPLIB3He}
-\end{figure}
 
 The most precise published Gap location comes from \citet{Jao2020} who use EDR3
 to locate the Gap at $M_{G} \sim 10.3$, we identify the Gap at a similar
@@ -94,11 +90,21 @@ reproduced by either any current models or the modeling we preform here. We
 elect then to specify the Gap location where this wedge is at its narrowest, on
 the red edge of the main sequence.
 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf}
+	\caption{Core $^{3}$He mass fraction for a model evolved with OPAL and a
+	model evolved with OPLIB within the Jao Gap's mass range. Note how the
+	OPLIB model undergoes the mixing event earlier in its evolution than the
+	OPAL model does.}
+	\label{fig:OPALOPLIB3He}
+\end{figure}
+
 The Gaps identified in our modeling have widths of approximately 0.03
-magnitudes, while the shift from OPAL to OPLIB opacities is anywhere from 0.02
-to 0.05 magnitudes. With the prior that the Gaps clearly shift before noise is
-injected we know that this shift is real. However, since the shift magnitude
-and Gap width are of approximately the same size in our synthetic populations
-its likely that in a real population --- with both compositional and age
-variations which we do not account for --- \textbf{the Gap location will not
-provide a usable constraint on the opacity source.}
+magnitudes, while the shift from OPAL to OPLIB opacities is 0.05 magnitudes.
+With the prior that the Gaps clearly shift before noise is injected we know
+that this shift is real. However, since the shift magnitude and Gap width are
+of approximately the same size in our synthetic populations its likely that in
+a real population --- with both compositional and age variations which we do
+not account for --- \textbf{the Gap location will not provide a usable
+constraint on the opacity source.}

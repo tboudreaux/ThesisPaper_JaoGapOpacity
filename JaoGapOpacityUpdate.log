@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2020.1.21)  17 AUG 2022 13:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2020.1.21)  18 AUG 2022 09:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -707,38 +707,52 @@ Package pdftex.def Info: src/figures/NotebookFigs/OPALOPLIB_popsynth_compare.pd
 f  used on input line 115.
 (pdftex.def)             Requested size: 436.15294pt x 166.13641pt.
 ) (./src/sections/Results.tex [6 <./src/figures/NotebookFigs/pdist.pdf>]
-<src/figures/NotebookFigs/OPAL_Jao_locator.pdf, id=385, 681.01828pt x 657.52058
+<src/figures/NotebookFigs/OPAL_Jao_locator.pdf, id=384, 681.01828pt x 657.52058
 pt>
 File: src/figures/NotebookFigs/OPAL_Jao_locator.pdf Graphic file (type pdf)
 <use src/figures/NotebookFigs/OPAL_Jao_locator.pdf>
 Package pdftex.def Info: src/figures/NotebookFigs/OPAL_Jao_locator.pdf  used on
- input line 38.
+ input line 42.
 (pdftex.def)             Requested size: 230.90128pt x 222.93199pt.
-<src/figures/NotebookFigs/OPLIB_Jao_locator.pdf, id=386, 681.01828pt x 657.5205
+<src/figures/NotebookFigs/OPLIB_Jao_locator.pdf, id=385, 681.01828pt x 657.5205
 8pt>
 File: src/figures/NotebookFigs/OPLIB_Jao_locator.pdf Graphic file (type pdf)
 <use src/figures/NotebookFigs/OPLIB_Jao_locator.pdf>
 Package pdftex.def Info: src/figures/NotebookFigs/OPLIB_Jao_locator.pdf  used o
-n input line 39.
+n input line 43.
 (pdftex.def)             Requested size: 230.90128pt x 222.93199pt.
-<src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf, id=388, 722.7pt x 722.7pt>
-File: src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf Graphic file (type pdf)
-<use src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf>
-Package pdftex.def Info: src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf  used on in
-put line 76.
-(pdftex.def)             Requested size: 230.90128pt x 230.89378pt.
-)
+
 [7 <./src/figures/NotebookFigs/OPALOPLIB_popsynth_compare.pdf>]
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 61.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 92.
 
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 61.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 92.
 
 
 Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
 
-(./src/sections/Conclusion.tex) (./src/appendicies/interp.tex
+<src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf, id=422, 722.7pt x 722.7pt>
+File: src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf Graphic file (type pdf)
+<use src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf>
+Package pdftex.def Info: src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf  used on in
+put line 95.
+(pdftex.def)             Requested size: 256.55872pt x 256.55478pt.
+
+Overfull \hbox (14.29219pt too wide) in paragraph at lines 95--96
+ [][] 
+ []
+
+) (./src/sections/Conclusion.tex) [8 <./src/figures/NotebookFigs/OPAL_Jao_locat
+or.pdf> <./src/figures/NotebookFigs/OPLIB_Jao_locator.pdf
+
+pdfTeX warning: pdflatex (file ./src/figures/NotebookFigs/OPLIB_Jao_locator.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <./src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf
+
+pdfTeX warning: pdflatex (file ./src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
+>] (./src/appendicies/interp.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
@@ -755,23 +769,13 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
 
-[8 <./src/figures/NotebookFigs/OPAL_Jao_locator.pdf> <./src/figures/NotebookFig
-s/OPLIB_Jao_locator.pdf
-
-pdfTeX warning: pdflatex (file ./src/figures/NotebookFigs/OPLIB_Jao_locator.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf
-
-pdfTeX warning: pdflatex (file ./src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
->]
 <src/figures/FractionalDifference.pdf, id=479, 533.75356pt x 457.65639pt>
 File: src/figures/FractionalDifference.pdf Graphic file (type pdf)
 <use src/figures/FractionalDifference.pdf>
 Package pdftex.def Info: src/figures/FractionalDifference.pdf  used on input li
 ne 41.
 (pdftex.def)             Requested size: 230.90128pt x 197.97557pt.
-) (./JaoGapOpacityUpdate.bbl [9 <./src/figures/FractionalDifference.pdf>])
+) [9 <./src/figures/FractionalDifference.pdf>] (./JaoGapOpacityUpdate.bbl)
 [10]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 90.
  (./JaoGapOpacityUpdate.aux)
@@ -781,10 +785,10 @@ Package rerunfilecheck Info: File `JaoGapOpacityUpdate.out' has not changed.
 (rerunfilecheck)             Checksum: CDFBBD0748EC17571D7AFA0B303704AD;615.
  ) 
 Here is how much of TeX's memory you used:
- 9828 strings out of 492641
- 136808 string characters out of 6131787
- 331408 words of memory out of 5000000
- 13468 multiletter control sequences out of 15000+600000
+ 9827 strings out of 492641
+ 136798 string characters out of 6131787
+ 332744 words of memory out of 5000000
+ 13467 multiletter control sequences out of 15000+600000
  16316 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  35i,12n,37p,1243b,409s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -816,10 +820,10 @@ onts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helv
 etic/uhvr8a.pfb>
-Output written on JaoGapOpacityUpdate.pdf (10 pages, 2410990 bytes).
+Output written on JaoGapOpacityUpdate.pdf (10 pages, 2334518 bytes).
 PDF statistics:
- 639 PDF objects out of 1000 (max. 8388607)
- 560 compressed objects within 6 object streams
+ 638 PDF objects out of 1000 (max. 8388607)
+ 559 compressed objects within 6 object streams
  86 named destinations out of 1000 (max. 500000)
  149 words of extra memory for PDF output out of 10000 (max. 10000000)
 
