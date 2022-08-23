@@ -21,14 +21,14 @@ metallicity this shift in mass range can be up to 0.05 M$_{\odot}$
 	\centering
 	\includegraphics[width=0.45\textwidth]{src/figures/NotebookFigs/OPALPunchIn.pdf}
 	\includegraphics[width=0.45\textwidth]{src/figures/NotebookFigs/OPLIBPunchIn.pdf}
-	\caption{Mass-luminosity relation for models evolved using OPAL opacity
+	\caption{Mass-luminosity relation at 7 Gyrs for models evolved using OPAL opacity
 	tables (top) and those evolved using OPLIB opacity tables (bottom). Note
 	the lower mass range of the OPLIB Gap.}
 	\label{fig:PunchIn}
 		
 \end{figure}
 
-\subsection{Population Synthethis}
+\subsection{Population Synthesis}
 In order to compare the Gap to observations we use in house population
 synthesis code. Our population synthesis code first uses inverse CDF sampling
 to build a distribution of target masses from some initial mass function (IMF).
@@ -44,12 +44,14 @@ with Aaron Dotter {\color{red}[How to cite Aaron's color code?]}. Next, we
 introduce observationally informed photometric and astrometric uncertainties
 into our population.
 
-We select the Gaia Catalogue of Nearby Stars (GCNS) \citep{GaiaCollaboration2021} to
-empirically calibrate uncertainty relations. A function with the form of
-Equation \ref{eqn:plxCalib} is fit to parallax uncertainty vs. G magnitude.
-Additionally, a function of the form of Equation \ref{eqn:MagCalib} is fit to
-to i$^{\text{th}}$ (G, BP, RP) magnitude uncertainty vs. i$^{\text{th}}$
-magnitude.
+The full series of steps in our population synthesis code are
+
+% We select the Gaia Catalogue of Nearby Stars (GCNS) \citep{GaiaCollaboration2021} to
+% empirically calibrate uncertainty relations. A function with the form of
+% Equation \ref{eqn:plxCalib} is fit to parallax uncertainty vs. G magnitude.
+% Additionally, a function of the form of Equation \ref{eqn:MagCalib} is fit to
+% to i$^{\text{th}}$ (G, BP, RP) magnitude uncertainty vs. i$^{\text{th}}$
+% magnitude.
 
 \begin{align}\label{eqn:plxCalib}
 	\sigma_{plx}(M_{g}) = ae^{bM_{g}}+c
@@ -62,47 +64,53 @@ magnitude.
 	\centering
 	\includegraphics[width=0.45\textwidth]{src/figures/NotebookFigs/pdist.pdf}
 	\caption{Probability distribution sampled when assigning true parallaxes to
-	synthetic stars. This distribution is built from the GCNS.}
+	synthetic stars. This distribution is built from the GCNS and includes all
+	stars with absolute BP-RP colors between 2.3 and 2.9, the same color range
+	of the Jao Gap.}
 	\label{fig:pdist}
 \end{figure}
 
-Each of these functions estimates the uncertainty of some quantity at a given
-magnitude. Moreover, for each sampled star in the synthetic population we select a
-parallax from the distribution in the GCNS (Figure \ref{fig:pdist}), referred
-to as the ``true parallax''. A parallax uncertainty is calculated based on the
-empirically calibrated parallax uncertainty and G-magnitude relation along with
-the synthetic stars G-magnitude (hereafter the ``true'' G magnitude) and the
-results of the fitting described in the previous paragraph. This uncertainty
-is then, with equal weighting, either added or subtracted from the true
-parallax, yielding an ``observed parallax''.
-
-The true parallax is used to convert the true i$^{\text{th}}$ magnitude to an
-apparent i$^{\text{th}}$ magnitude and the observed parallax is used to convert
-the apparent i$^{\text{th}}$ magnitude into an observed i$^{\text{th}}$
-magnitude. Finally, each observed magnitude is summed with an estimated
-photometric uncertainty for that magnitude based on the fit of the
-i$^{\text{th}}$ magnitude to the uncertainty in the i$^{\text{th}}$ magnitude.
-
-To summarize the process that each synthetic star will go through
+% Each of these functions estimates the uncertainty of some quantity at a given
+% magnitude. Moreover, for each sampled star in the synthetic population we
+% select a parallax from the distribution in the GCNS (Figure \ref{fig:pdist}),
+% referred to as the ``true parallax''. This disibution is limited to only
+% include stars in the absolute BP-RP color range of 2.3-2.9, the same range as
+% the Jao Gap. A parallax uncertainty is calculated based on the empirically
+% calibrated parallax uncertainty and G-magnitude relation along with the
+% synthetic stars G-magnitude (hereafter the ``true'' G magnitude) and the
+% results of the fitting described in the previous paragraph. This uncertainty is
+% then, with equal weighting, either added or subtracted from the true parallax,
+% yielding an ``observed parallax''.
+%
+% The true parallax is used to convert the true i$^{\text{th}}$ magnitude to an
+% apparent i$^{\text{th}}$ magnitude and the observed parallax is used to convert
+% the apparent i$^{\text{th}}$ magnitude into an observed i$^{\text{th}}$
+% magnitude. Finally, each observed magnitude is summed with an estimated
+% photometric uncertainty for that magnitude based on the fit of the
+% i$^{\text{th}}$ magnitude to the uncertainty in the i$^{\text{th}}$ magnitude.
+%
+% To summarize the process that each synthetic star will go through
 \begin{enumerate}
 	\item Sample from a \citet{Sollima2019} IMF to determine synthetic star mass.
 	\item Find the closest model above and below the synthetic star, lineally
 		interpolate model parameters to the synthetic star mass.
 	\item Convert synthetic star $g$, $T_{eff}$, and $Log(L)$ to Gaia G, BP,
-		and RP colors.
-	\item Sample from the GCNS to assign synthetic star a ``true'' parallax.
+		and RP magnitudes.
+	\item Sample from the GCNS, limited to the absolute BP-RP color range of
+		2.3 -- 2.9, to assign synthetic star a ``true'' parallax.
+	\item Use the true parallax to find an apparent magnitude for each filter.
 	\item Evaluate the empirical calibration given in Equation
 		\ref{eqn:plxCalib} to find an associated parallax uncertainty and
-		adjust the true parallax by this value resulting in an observed
+		adjust the true parallax by this value resulting in an ``observed''
 		parallax.
-	\item Use the true parallax to find an apparent magnitude for each filter.
-	\item Use the observed parallax and the apparent magnitude to find an
-		observed magnitude.
-	\item Evaluate the empirical calibration given in Equation
-		\ref{eqn:MagCalib} to give a magnitude uncertainty scale in each band.
-	\item Adjust each magnitude by some amount sampled from a normal
+	\item Use the ``observed'' parallax and the apparent magnitude to find an
+		``observed'' magnitude.
+	\item Fit the empirical calibration given in Equation \ref{eqn:MagCalib} to
+		the GCNS and evaluate it to give a magnitude uncertainty scale in each
+		band.
+	\item Adjust each magnitude by an amount sampled from a normal
 		distribution with a standard deviation of the magnitude uncertainty
-		scale.
+		scale found in the previous step.
 \end{enumerate}
 
 This method then incorporates both photometric and astrometric uncertainties

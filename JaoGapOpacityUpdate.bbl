@@ -32,26 +32,6 @@ Chandra, R.~V., \& Varanasi, B.~S. 2015, Python requests essentials (Packt
 {Choi}, J., {Dotter}, A., {Conroy}, C., {et~al.} 2016, \apj, 823, 102,
   \dodoi{10.3847/0004-637X/823/2/102}
 
-\bibitem[{{Colgan} {et~al.}(2015){Colgan}, {Kilcrease}, {Magee}, {Abdallah},
-  {Sherrill}, {Fontes}, {Hakel}, \& {Zhang}}]{Colgan2015}
-{Colgan}, J., {Kilcrease}, D.~P., {Magee}, N.~H., {et~al.} 2015, High Energy
-  Density Physics, 14, 33, \dodoi{10.1016/j.hedp.2015.02.006}
-
-\bibitem[{{Colgan} {et~al.}(2013{\natexlab{a}}){Colgan}, {Kilcrease}, {Magee},
-  {Armstrong}, {Abdallah}, {Sherrill}, {Fontes}, {Zhang}, \&
-  {Hakel}}]{Colgan2013a}
----. 2013{\natexlab{a}}, High Energy Density Physics, 9, 369,
-  \dodoi{10.1016/j.hedp.2013.03.001}
-
-\bibitem[{{Colgan} {et~al.}(2013{\natexlab{b}}){Colgan}, {Kilcrease}, {Magee},
-  {Armstrong}, {Abdallah}, {Sherrill}, {Fontes}, {Zhang}, \&
-  {Hakel}}]{Colgan2013b}
-{Colgan}, J., {Kilcrease}, D.~P., {Magee}, N.~H., J., {et~al.}
-  2013{\natexlab{b}}, in American Institute of Physics Conference Series, Vol.
-  1545, Eighth International Conference on Atomic and Molecular Data and Their
-  Applications: ICAMDATA-2012, ed. J.~D. {Gillaspy}, W.~L. {Wiese}, \& Y.~A.
-  {Podpaly}, 17--26
-
 \bibitem[{{Colgan} {et~al.}(2016){Colgan}, {Kilcrease}, {Magee}, {Sherrill},
   {Abdallah}, {Hakel}, {Fontes}, {Guzik}, \& {Mussack}}]{Colgan2016}
 {Colgan}, J., {Kilcrease}, D.~P., {Magee}, N.~H., {et~al.} 2016, in APS Meeting
@@ -91,6 +71,11 @@ Dotter, A., Chaboyer, B., Jevremovi{\'c}, D., {et~al.} 2008, The Astrophysical
 \bibitem[{{Feiden} {et~al.}(2021){Feiden}, {Skidmore}, \& {Jao}}]{Feiden2021}
 {Feiden}, G.~A., {Skidmore}, K., \& {Jao}, W.-C. 2021, \apj, 907, 53,
   \dodoi{10.3847/1538-4357/abcc03}
+
+\bibitem[{{Ferguson} {et~al.}(2005){Ferguson}, {Alexander}, {Allard}, {Barman},
+  {Bodnarik}, {Hauschildt}, {Heffner-Wong}, \& {Tamanai}}]{Ferguson2005}
+{Ferguson}, J.~W., {Alexander}, D.~R., {Allard}, F., {et~al.} 2005, \apj, 623,
+  585, \dodoi{10.1086/428642}
 
 \bibitem[{{Fontes} {et~al.}(2015){Fontes}, {Zhang}, {Abdallah}, {Clark},
   {Kilcrease}, {Colgan}, {Cunningham}, {Hakel}, {Magee}, \&

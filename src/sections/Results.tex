@@ -4,7 +4,7 @@ We quantify the Jao Gap location along the magnitude (Table
 the linear number density along the magnitude axis of each sub-sample,
 averaging these linear number densities, and extracting any peaks above a
 prominence threshold of 0.1 as potential magnitudes of the Jao Gap (Figure
-\ref{fig:JaoGapLocator}). Gap widths are measuredat 50\% the height of the peak
+\ref{fig:JaoGapLocator}). Gap widths are measured at 50\% the height of the peak
 prominence. We use the python package \texttt{scipy} \citep{2020SciPy-NMeth} to
 both identify peaks and measure their widths. 
 
@@ -29,7 +29,7 @@ finds two gaps above the prominence threshold. The identification of more than
 one gap is not inconsistent with the mass-luminosity relation seen in the grids
 we evolve. As noise is injected into a synthetic population smaller features will
 be smeared out while larger ones will tend to persist. The mass-luminosity
-relations showin in Figure \ref{fig:PunchIn} make it clear that there are: (1),
+relations shown in in Figure \ref{fig:PunchIn} make it clear that there are: (1),
 multiple gaps due to stars of different masses undergoing convective mixing
 events at different ages, and (2), the gaps decrease in width moving to lower
 masses / redder. Therefore, the multiple gaps we identify are attributable to
@@ -49,7 +49,7 @@ third gap in both the OPAL and OPLIB datasets where one would be expected.
 	\label{fig:JaoGapLocator}
 \end{figure}
 
-The mean gap location of the OPLIB population is at a faiter magnitude than the
+The mean gap location of the OPLIB population is at a fainter magnitude than the
 mean gap location of the OPAL population. Consequently, in the OPLIB sample the
 convective mixing events which drive the kissing instability happen more
 regularly and therefore also start earlier in the model's evolution. This is
@@ -61,50 +61,58 @@ slowly increase.
 % model shows that this shorter duration between mixing events (Figure
 % \ref{fig:OPALOPLIB3He}).
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.45\textwidth]{src/figures/NotebookFigs/SameMassConvectiveZoneComp.pdf}
+	\caption{Portions of 0.3526 $M_{\odot}$ OPAL and OPLIB stellar models
+	showing the interior shells which are radiative (black region). Note that
+	for clarity only one convective mixing event from each model is shown. Note
+	how the radiative zone in the OPLIB model is larger.}
+	\label{fig:Unstable}
+\end{figure}
 
-Convective mixing events starting earlier in a model's evolution are consistent
-with the slightly lower opacities characteristic to OPLIB. A lower opacity
-fluid will have a more shallow radiative temperature gradient than a higher
-opacity fluid; however, as the adiabatic temperature gradient remains
-essentially unchanged as a function of radius, a larger interior radius of the
-model will remain unstable to convection {\color{red}[CHECK IF THIS OR IF
-RADIATIVE ZONE MOVING IN]}. This larger convective zone, and therefore smaller
-radiative zone, is in line with the behavior of the models presented here as it
-with the radiative zone closer to the convective zone it takes less time for
-that radiative zone to heat up and become unstable to convection. We see that
-OPLIB models undergo convective mixing events earlier in their evolution than
-OPAL models (Figure \ref{fig:OPALOPLIB3He}) implying that the inner convective
-zone did not have to expand as much to meet the outer convective zone. 
-
+Radially larger radiative zones are consistent with the slightly lower
+opacities characteristic to OPLIB. A lower opacity fluid will have a more
+shallow radiative temperature gradient than a higher opacity fluid; however, as
+the adiabatic temperature gradient remains essentially unchanged as a function
+of radius, a larger interior radius of the model will remain unstable to
+radiation (Figure \ref{fig:Unstable}). This thicker radiative zone will extend
+the time it takes the core convective zone to meet up with convective envelope.
+We can additionally see this longer lived radiative zone in the core $^{3}$He
+mass fraction, in which OPLIB models reach much higher concentrations --- at
+approximately the same growth rate --- for the same mass (Figure
+\ref{fig:OPALOPLIB3He}). 
 
 The most precise published Gap location comes from \citet{Jao2020} who use EDR3
 to locate the Gap at $M_{G} \sim 10.3$, we identify the Gap at a similar
-location in the GCNS data. \textbf{The Gap in populations evolved using OPLIB tables
-is closer to this measurement than it is in populations evolved using OPAL tables
-(Table \ref{tab:GapLocation}).} It should be noted that the exact location of
-the observed Gap is poorly captured by a single value as the Gap visibly
-compresses across the width of the main-sequence, wider on the blue edge and
-narrower on the red edge such that the observed Gap has downward facing a wedge
-shape (Figure \ref{fig:JaoGap}). This wedge shape is not successfully
-reproduced by either any current models or the modeling we preform here. We
-elect then to specify the Gap location where this wedge is at its narrowest, on
-the red edge of the main sequence.
+location in the GCNS data. \textbf{The Gap in populations evolved using OPLIB
+tables is closer to this measurement than it is in populations evolved using
+OPAL tables (Table \ref{tab:GapLocation}).} It should be noted that the exact
+location of the observed Gap is poorly captured by a single value as the Gap
+visibly compresses across the width of the main-sequence, wider on the blue
+edge and narrower on the red edge such that the observed Gap has downward
+facing a wedge shape (Figure \ref{fig:JaoGap}). This wedge shape is not
+successfully reproduced by either any current models or the modeling we preform
+here. We elect then to specify the Gap location where this wedge is at its
+narrowest, on the red edge of the main sequence.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.5\textwidth]{src/figures/NotebookFigs/3HeOPAL_OPLIB.pdf}
-	\caption{Core $^{3}$He mass fraction for a model evolved with OPAL and a
-	model evolved with OPLIB within the Jao Gap's mass range. Note how the
-	OPLIB model undergoes the mixing event earlier in its evolution than the
-	OPAL model does.}
+	\includegraphics[width=0.45\textwidth]{src/figures/NotebookFigs/Core3HECompSameMass.pdf}
+	\caption{Core $^{3}$He mass fraction for  0.3526 $M_{\odot}$ models evolved
+	with OPAL and OPLIB (within the Jao Gap's mass range for both). Note how
+	the OPLIB model's core $^{3}$He mass fraction grows at approximately the
+	same rate as the OPAL model's but continues uninterrupted for longer.}
 	\label{fig:OPALOPLIB3He}
 \end{figure}
 
 The Gaps identified in our modeling have widths of approximately 0.03
 magnitudes, while the shift from OPAL to OPLIB opacities is 0.05 magnitudes.
 With the prior that the Gaps clearly shift before noise is injected we know
-that this shift is real. However, since the shift magnitude and Gap width are
-of approximately the same size in our synthetic populations its likely that in
-a real population --- with both compositional and age variations which we do
-not account for --- \textbf{the Gap location will not provide a usable
-constraint on the opacity source.}
+that this shift is real. However, the shift magnitude and Gap width are of
+approximately the same size in our synthetic populations. Moreover,
+\citet{Feiden2021} identify that the shift in the modeled Gap mass from [Fe/H]
+= 0 to [Fe/H] = +0.5 as 0.04$M_{\odot}$, whereas we only see an approximate
+$0.01$ M$_{\odot}$ shift between OPAL and OPLIB models. \textbf{Therefore, the
+Gap location will likely not provide a usable constraint on the opacity
+source.} 
