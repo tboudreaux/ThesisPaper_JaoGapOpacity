@@ -30,28 +30,11 @@ metallicity this shift in mass range can be up to 0.05 M$_{\odot}$
 
 \subsection{Population Synthesis}
 In order to compare the Gap to observations we use in house population
-synthesis code. Our population synthesis code first uses inverse CDF sampling
-to build a distribution of target masses from some initial mass function (IMF).
-Specifically we use the \citet{Sollima2019} IMF where, for masses 0.25
-$M_{\odot} < M < 1 M_{\odot}$, $\alpha=-1.34\pm0.07$. The model nearest in mass
-to the samples mass above and the nearest model below are then selected from
-the evolved model database. The surface gravity, luminosity, and effective
-temperature of the sample are estimated from a linear interpolation between the
-upper and lower bounding models. $T_{eff}$, $g$, and $\log(L)$ are transformed
-to Gaia G, BP, and RP magnitudes using the Gaia (E)DR3 bolometric corrections
-\citep{Creevey2022} along with code obtained thorough personal communication
-with Aaron Dotter {\color{red}[How to cite Aaron's color code?]}. Next, we
-introduce observationally informed photometric and astrometric uncertainties
-into our population.
-
-The full series of steps in our population synthesis code are
-
-% We select the Gaia Catalogue of Nearby Stars (GCNS) \citep{GaiaCollaboration2021} to
-% empirically calibrate uncertainty relations. A function with the form of
-% Equation \ref{eqn:plxCalib} is fit to parallax uncertainty vs. G magnitude.
-% Additionally, a function of the form of Equation \ref{eqn:MagCalib} is fit to
-% to i$^{\text{th}}$ (G, BP, RP) magnitude uncertainty vs. i$^{\text{th}}$
-% magnitude.
+synthesis code. We empirically calibrate the relation between G, BP, and RP
+magnitudes and their uncertainties along with the parallax/G magnitude
+uncertainty relation using the GCNS and Equations \ref{eqn:plxCalib} \&
+\ref{eqn:MagCalib}. The full series of steps in our population synthesis code
+are
 
 \begin{align}\label{eqn:plxCalib}
 	\sigma_{plx}(M_{g}) = ae^{bM_{g}}+c
@@ -65,38 +48,22 @@ The full series of steps in our population synthesis code are
 	\includegraphics[width=0.45\textwidth]{src/figures/NotebookFigs/pdist.pdf}
 	\caption{Probability distribution sampled when assigning true parallaxes to
 	synthetic stars. This distribution is built from the GCNS and includes all
-	stars with absolute BP-RP colors between 2.3 and 2.9, the same color range
+	stars with BP-RP colors between 2.3 and 2.9, the same color range
 	of the Jao Gap.}
 	\label{fig:pdist}
 \end{figure}
 
-% Each of these functions estimates the uncertainty of some quantity at a given
-% magnitude. Moreover, for each sampled star in the synthetic population we
-% select a parallax from the distribution in the GCNS (Figure \ref{fig:pdist}),
-% referred to as the ``true parallax''. This disibution is limited to only
-% include stars in the absolute BP-RP color range of 2.3-2.9, the same range as
-% the Jao Gap. A parallax uncertainty is calculated based on the empirically
-% calibrated parallax uncertainty and G-magnitude relation along with the
-% synthetic stars G-magnitude (hereafter the ``true'' G magnitude) and the
-% results of the fitting described in the previous paragraph. This uncertainty is
-% then, with equal weighting, either added or subtracted from the true parallax,
-% yielding an ``observed parallax''.
-%
-% The true parallax is used to convert the true i$^{\text{th}}$ magnitude to an
-% apparent i$^{\text{th}}$ magnitude and the observed parallax is used to convert
-% the apparent i$^{\text{th}}$ magnitude into an observed i$^{\text{th}}$
-% magnitude. Finally, each observed magnitude is summed with an estimated
-% photometric uncertainty for that magnitude based on the fit of the
-% i$^{\text{th}}$ magnitude to the uncertainty in the i$^{\text{th}}$ magnitude.
-%
-% To summarize the process that each synthetic star will go through
 \begin{enumerate}
-	\item Sample from a \citet{Sollima2019} IMF to determine synthetic star mass.
+	\item Sample from a \citet{Sollima2019} ($0.25 M_{\odot} < M < 1 M_{\odot}$,
+		$\alpha=-1.34\pm0.07$) IMF to determine synthetic star mass.
 	\item Find the closest model above and below the synthetic star, lineally
-		interpolate model parameters to the synthetic star mass.
+		interpolate these models' $T_{eff}$, $\log(g)$, and $\log(L)$ to those
+		at the synthetic star mass.
 	\item Convert synthetic star $g$, $T_{eff}$, and $Log(L)$ to Gaia G, BP,
-		and RP magnitudes.
-	\item Sample from the GCNS, limited to the absolute BP-RP color range of
+		and RP magnitudes using the Gaia (E)DR3 bolometric corrections
+		\citep{Creevey2022} along with code obtained thorough personal
+		communication with Aaron Dotter \citep{Choi2016}.
+	\item Sample from the GCNS, limited to the BP-RP color range of
 		2.3 -- 2.9, to assign synthetic star a ``true'' parallax.
 	\item Use the true parallax to find an apparent magnitude for each filter.
 	\item Evaluate the empirical calibration given in Equation

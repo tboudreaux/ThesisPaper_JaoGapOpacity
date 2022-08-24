@@ -4,44 +4,44 @@ The top-level auxiliary file: JaoGapOpacityUpdate.aux
 The style file: aasjournal.bst
 Database file #1: src/bib/ms.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 29 entries,
+You've used 28 entries,
             3166 wiz_defined-function locations,
-            895 strings with 14222 characters,
-and the built_in function-call counts, 15070 in all, are:
-= -- 1124
-> -- 1344
-< -- 15
-+ -- 445
-- -- 471
-* -- 1440
-:= -- 2816
-add.period$ -- 31
-call.type$ -- 29
-change.case$ -- 158
-chr.to.int$ -- 29
-cite$ -- 29
-duplicate$ -- 511
-empty$ -- 832
-format.name$ -- 522
-if$ -- 2989
+            884 strings with 13956 characters,
+and the built_in function-call counts, 14745 in all, are:
+= -- 1095
+> -- 1332
+< -- 14
++ -- 441
+- -- 468
+* -- 1417
+:= -- 2755
+add.period$ -- 30
+call.type$ -- 28
+change.case$ -- 154
+chr.to.int$ -- 28
+cite$ -- 28
+duplicate$ -- 496
+empty$ -- 805
+format.name$ -- 518
+if$ -- 2921
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 27
-newline$ -- 97
-num.names$ -- 117
-pop$ -- 179
+missing$ -- 26
+newline$ -- 94
+num.names$ -- 113
+pop$ -- 176
 preamble$ -- 1
-purify$ -- 158
+purify$ -- 154
 quote$ -- 0
-skip$ -- 451
+skip$ -- 437
 stack$ -- 0
-substring$ -- 541
+substring$ -- 524
 swap$ -- 24
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 258
+type$ -- 249
 warning$ -- 0
-while$ -- 108
+while$ -- 104
 width$ -- 0
-write$ -- 321
+write$ -- 310

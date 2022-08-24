@@ -1,0 +1,9 @@
+Things to update in the paper:
+ - Change Absolute Color to just color (color is independent of distance) [x]
+ - Update P 3 in Results (line 357 - 367 currently) to refelect updated understanding
+ - Cut out more of the Pop Synth words (before the enumerated list) [x]
+ - change Z/X in 230 to solar Z/X surface abundance [x]
+ - Change 4.5 in line 199 to 4.3 [x]
+ - Remove section 3.2 reference at end of introduction (line 84) [x]
+ - Add sentence to abstract summarizing that the gap likely does not constrain the opacity source [x]
+ - Email James at Los Alamos about code
