@@ -8,6 +8,18 @@ prominence threshold of 0.1 as potential magnitudes of the Jao Gap (Figure
 prominence. We use the python package \texttt{scipy} \citep{2020SciPy-NMeth} to
 both identify peaks and measure their widths. 
 
+\begin{figure*}[ht!]
+	\centering
+	\includegraphics[width=0.45\textwidth]{OPAL_Jao_locator.pdf}
+	\includegraphics[width=0.45\textwidth]{OPLIB_Jao_locator.pdf}
+	\caption{(right panels) OPAL (left) and OPLIB (right) synthetic
+	populations. (left panels) Normalized linear number density along the
+	magnitude axis. A dashed line has been extended from the peak through both
+	panels to make clear where the identified Jao Gap location is wrt. to the
+	population. }
+	\label{fig:JaoGapLocator}
+\end{figure*}
+
 \begin{table}
 	\centering
 	\begin{tabular}{c | c c c}
@@ -41,30 +53,19 @@ Previous modeling efforts \citep[e.g.][]{Feiden2021} have not identified
 multiple gaps. This is likely due to two reasons: (1), previous studies have
 allowed metallicity to vary across their model grids, further smearing the gaps
 out, and (2), previous studies have used more coarse underlying mass grids,
-obscuring features smallers than their mass step. While this dual-gap structure
+obscuring features smaller than their mass step. While this dual-gap structure
 has not been seen in models before, a more complex gap structure is not totally
-unpresidented as \citet{Jao2021} identifies an additionl underdense region
+unprecedented as \citet{Jao2021} identifies an additional under-dense region
 below the primary gap in EDR3 data. As part of a follow up series of papers, we
-are conducting further work to incorperate metallicity variations while still
+are conducting further work to incorporate metallicity variations while still
 using the finer mass sampling presented here.
 
-\begin{figure*}
-	\centering
-	\includegraphics[width=0.45\textwidth]{OPAL_Jao_locator.pdf}
-	\includegraphics[width=0.45\textwidth]{OPLIB_Jao_locator.pdf}
-	\caption{(right panels) OPAL (left) and OPLIB (right) synthetic
-	populations. (left panels) Normalized linear number density along the
-	magnitude axis. A dashed line has been extended from the peak through both
-	panels to make clear where the identified Jao Gap location is wrt. to the
-	population. }
-	\label{fig:JaoGapLocator}
-\end{figure*}
 
 The mean gap location of the OPLIB population is at a fainter magnitude than
 the mean gap location of the OPAL population. Consequently, in the OPLIB sample
 the convective mixing events which drive the kissing instability begin
-happening at lower masses (i.e. the convective transtion mass decreases). A
-lower mass range will nautrally result in a fainter mean gap magnitude.
+happening at lower masses (i.e. the convective transition mass decreases). A
+lower mass range will naturally result in a fainter mean gap magnitude.
 
 \begin{figure}
 	\centering
@@ -76,21 +77,21 @@ lower mass range will nautrally result in a fainter mean gap magnitude.
 	\label{fig:Unstable}
 \end{figure}
 
-Mixing events at lower masses in OPLIB models are atributable to the radially
-thicker, at the same mass, radiative zones (Figure \ref{fig:Unstable}), which
-take more time to break down at similar decay rates, charectaristic to OPLIB
-models as of a result of their slightly lower opacities. A lower opacity fluid
-will have a more shallow radiative temperature gradient than a higher opacity
-fluid; however, as the adiabatic temperature gradient remains essentially
-unchanged as a function of radius, a larger interior radius of the model will
-remain unstable to radiation . This thicker radiative zone will increase the
-time it takes the core convective zone to meet up with convective envelope
-meaning that lower mass models can stustain a radiative zone for longer than
-they could otherwise; thus; lower opacities push the convective transtion mass
-down. We can additionally see this longer lived radiative zone in the core
-$^{3}$He mass fraction, in which OPLIB models reach much higher concentrations
---- at approximately the same growth rate --- for the same mass as OPAL models
-do (Figure \ref{fig:OPALOPLIB3He}). 
+Mixing events at lower masses in OPLIB models are attributable to the radially
+thicker, at the same mass, radiative zones (Figure \ref{fig:Unstable}). This
+thicker radiative zone will take more time to break down and is characteristic
+of OPLIB models as of a result of their slightly lower opacities. A lower
+opacity fluid will have a more shallow radiative temperature gradient than a
+higher opacity fluid; however, as the adiabatic temperature gradient remains
+essentially unchanged as a function of radius, a larger interior radius of the
+model will remain unstable to radiation. This thicker radiative zone will
+increase the time it takes the core convective zone to meet up with convective
+envelope meaning that lower mass models can sustain a radiative zone for
+longer than they could otherwise; thus; lower opacities push the convective
+transition mass down. We can additionally see this longer lived radiative zone
+in the core $^{3}$He mass fraction, in which OPLIB models reach much higher
+concentrations --- at approximately the same growth rate --- for the same mass
+as OPAL models do (Figure \ref{fig:OPALOPLIB3He}). 
 
 The most precise published Gap location comes from \citet{Jao2020} who use EDR3
 to locate the Gap at $M_{G} \sim 10.3$, we identify the Gap at a similar
