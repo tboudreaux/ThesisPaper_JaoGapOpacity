@@ -4,7 +4,7 @@ of models. One of these grids uses the OPAL high-temperature opacity tables
 while the other uses the OPLIB tables (Figure \ref{fig:PunchIn}). Each grid
 evolves a model every 0.00025 $M_{\odot}$ from 0.2 to 0.4 $M_{\odot}$ and every
 0.005 $M_{\odot}$ from 0.4 to 0.8 $M_{\odot}$. All models in both grids use a
-GS98 solar composition, the (1, 101, 0) \texttt{Free\_EOS} (version
+GS98 solar composition, the (1, 101, 0) \texttt{FreeEOS} (version
 {\color{red}2.7}) configuration, and 1000 year old pre-main sequence polytropic
 models, with polytropic index 1.5, as their initial conditions.
 
@@ -32,9 +32,14 @@ metallicity this shift in mass range can be up to 0.05 M$_{\odot}$
 In order to compare the Gap to observations we use in house population
 synthesis code. We empirically calibrate the relation between G, BP, and RP
 magnitudes and their uncertainties along with the parallax/G magnitude
-uncertainty relation using the GCNS and Equations \ref{eqn:plxCalib} \&
-\ref{eqn:MagCalib}. The full series of steps in our population synthesis code
-are
+uncertainty relation using the Gaia Catalouge of Nearby Stas
+\citep[GCNS,][]{GaiaCollaboration2021} and Equations \ref{eqn:plxCalib} \&
+\ref{eqn:MagCalib}. $M_{g}$ is the Gaia G magnitude while $M_{i}$ is the
+magnitude in the i$^\text{th}$ band, G, BP, or RP. The coefficients $a$, $b$,
+and $c$ determined using a non-linear least squares fitting routine. Equation
+\ref{eqn:plxCalib} then models the relation between G magnitude and parallax
+uncertainty while Equation \ref{eqn:MagCalib} models the relation between each
+magnitude and its uncertainty.
 
 \begin{align}\label{eqn:plxCalib}
 	\sigma_{plx}(M_{g}) = ae^{bM_{g}}+c
@@ -42,6 +47,9 @@ are
 \begin{align}\label{eqn:MagCalib}
 	\sigma_{i}(M_{i}) = ae^{M_{i}-b}+c
 \end{align}
+
+\noindent The full series of steps in our population synthesis code
+are:
 
 \begin{figure}
 	\centering
@@ -63,13 +71,15 @@ are
 		and RP magnitudes using the Gaia (E)DR3 bolometric corrections
 		\citep{Creevey2022} along with code obtained thorough personal
 		communication with Aaron Dotter \citep{Choi2016}.
-	\item Sample from the GCNS, limited to the BP-RP color range of
-		2.3 -- 2.9, to assign synthetic star a ``true'' parallax.
+	\item Sample from the GCNS parallax distribution (Figure \ref{fig:pdist}),
+		limited to stars within the BP-RP color range of 2.3 -- 2.9, to assign
+		synthetic star a ``true'' parallax.
 	\item Use the true parallax to find an apparent magnitude for each filter.
 	\item Evaluate the empirical calibration given in Equation
-		\ref{eqn:plxCalib} to find an associated parallax uncertainty and
-		adjust the true parallax by this value resulting in an ``observed''
-		parallax.
+		\ref{eqn:plxCalib} to find an associated parallax uncertainty. Then
+		sample from a normal distribution with a standard deviation equal to
+		that uncertainty to adjust the true parallax resulting in an
+		``observed'' parallax.
 	\item Use the ``observed'' parallax and the apparent magnitude to find an
 		``observed'' magnitude.
 	\item Fit the empirical calibration given in Equation \ref{eqn:MagCalib} to

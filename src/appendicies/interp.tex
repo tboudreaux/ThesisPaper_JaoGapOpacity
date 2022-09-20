@@ -1,9 +1,14 @@
 \section{Interpolating $\rho \rightarrow $ R}\label{apx:interp}
-OPLIB reports $\kappa_{R}$ as a function of mass density, temperature in keV,
-and composition. DSEP uses tables where opacity is given as a
-function of temperature in Kelvin, $R$, and composition. The conversion from
-temperature in keV to Kelvin is trivial
-\begin{align}
+OPLIB parameterizes $\kappa_{R}$ as a function of mass density, temperature in keV,
+and composition. Type 1 OPAL high temperature opacity tables, which DSEP and
+many other stellar evolution programs use, instead parameterizes opacity as a function
+of temperature in Kelvin, $R$ (Equation \ref{eqn:Req}), and composition. The
+conversion from temperature in keV to Kelvin is trivial (Equation
+\ref{eqn:K2Kev}).
+\begin{align}\label{eqn:Req}
+	R = \frac{\rho}{T_{6}^{3}}
+\end{align}
+\begin{align}\label{eqn:K2Kev}
 	T_{K} = T_{keV} * 11604525.0061657
 \end{align}
 However, the conversion from mass density to $R$ is more involved. Because $R$ is
@@ -12,12 +17,12 @@ directly convert tabulated values of opacity reported in the OPLIB tables to
 their equivalents in $R$ space. Instead we must rotate the tables,
 interpolating $\kappa_{R}(\rho,T_{eff}) \rightarrow \kappa_{R}(R,T_{eff})$. 
 
+
 To preform this rotation we use the \texttt{interp2d} function within
 \texttt{scipy}'s \texttt{interpolate} \citep{2020SciPy-NMeth} module to
 construct a cubic bivariate B-spline \citep{Dierckx1981} interpolating function
 $s$, with a smoothing factor of 0, representing the surface $\kappa_{R}(\rho,
-T_{eff})$. For each $R^{i}$ and $T^{j}_{eff}$ which DSEP expects
-high-temperature opacities to be reported for, we evaluate Equation
+T_{eff})$. For each $R^{i}$ and $T^{j}_{eff}$ reported in type 1 OPAL tables, we evaluate Equation
 \ref{eqn:Req} to find $\rho^{ij} = \rho(T^{j}_{eff},R^{i})$.  Opacities in
 $T_{eff}$, $R$ space are then inferred as $\kappa^{ij}_{R}(R^{i},T^{j}_{eff}) =
 s(\rho^{ij}, T^{j}_{eff})$. 
@@ -32,9 +37,9 @@ denotes $\log(R)=-1.5$ where models will tend to sit for much of their radius.
 Along the $\log(R)=-1.5$ line the mean fractional difference is $\langle \delta
 \rangle = 0.006$ with an uncertainty of $\sigma_{\langle\delta\rangle} =
 0.009$. One point of note is that, because the initial rotation into $\log(R)$
-space also reduces the domain of the opacity function interpolation-edge
-effects which we avoid initially by extending the domain past what DSEP needs
-cannot be avoided when interpolating back into $\rho$ space. 
+space also reduces the domain of the opacity function, interpolation-edge
+effects which we avoid initially by extending the domain past what type 1 OPAL
+tables include cannot be avoided when interpolating back into $\rho$ space. 
 
 \begin{figure}
 	\centering
@@ -42,7 +47,7 @@ cannot be avoided when interpolating back into $\rho$ space.
 	\caption{Log Fractional Difference between opacities in $\kappa_{R}(\rho,
 	T_{eff})$ space directly queried from the OPLIB web-form and those which
 	have been interpolated into $\log(R)$ space and back. Note that, due to the
-	temperature grid DSEP uses not aligning perfectly which the temperature
+	temperature grid of type 1 OPAL tables not aligning perfectly which the temperature
 	grid OPLIB uses there may be edge effects where the interpolation is poorly
 	constrained. The red line corresponds to $\log(R) = -1.5$ where much of a
 	stellar model's radius exists.}

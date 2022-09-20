@@ -19,6 +19,11 @@
 {Baraffe}, I., \& {Chabrier}, G. 2018, \aap, 619, A177,
   \dodoi{10.1051/0004-6361/201834062}
 
+\bibitem[{Boudreaux(2022)}]{Boudreaux22}
+Boudreaux, T. 2022, tboudreaux/pytopsscrape: pyTOPSScrape v1.0, v1.0,  Zenodo,
+  \dodoi{10.5281/zenodo.7094198}.
+\newblock \url{https://doi.org/10.5281/zenodo.7094198}
+
 \bibitem[{{Chabrier} \& {Baraffe}(1997)}]{Chabrier1997}
 {Chabrier}, G., \& {Baraffe}, I. 1997, \aap, 327, 1039.
 \newblock \doarXiv{astro-ph/9704118}
@@ -59,6 +64,10 @@ Chandra, R.~V., \& Varanasi, B.~S. 2015, Python requests essentials (Packt
   arXiv:2206.05864.
 \newblock \doarXiv{2206.05864}
 
+\bibitem[{Dierckx(1981)}]{Dierckx1981}
+Dierckx, P. 1981, IMA Journal of Numerical Analysis, 1, 267,
+  \dodoi{10.1093/imanum/1.3.267}
+
 \bibitem[{Dotter {et~al.}(2008)Dotter, Chaboyer, Jevremovi{\'c}, Kostov, Baron,
   \& Ferguson}]{Dotter2008}
 Dotter, A., Chaboyer, B., Jevremovi{\'c}, D., {et~al.} 2008, The Astrophysical
@@ -95,6 +104,11 @@ Dotter, A., Chaboyer, B., Jevremovi{\'c}, D., {et~al.} 2008, The Astrophysical
 {Iglesias}, C.~A., \& {Rogers}, F.~J. 1996, \apj, 464, 943,
   \dodoi{10.1086/177381}
 
+\bibitem[{{Irwin}(2012)}]{Irwin2012}
+{Irwin}, A.~W. 2012, {FreeEOS: Equation of State for stellar interiors
+  calculations}, Astrophysics Source Code Library, record ascl:1211.002.
+\newblock \doeprint{1211.002}
+
 \bibitem[{{Jao} \& {Feiden}(2020)}]{Jao2020}
 {Jao}, W.-C., \& {Feiden}, G.~A. 2020, \aj, 160, 102,
   \dodoi{10.3847/1538-3881/aba192}
@@ -106,6 +120,10 @@ Dotter, A., Chaboyer, B., Jevremovi{\'c}, D., {et~al.} 2008, The Astrophysical
 \bibitem[{{Jao} {et~al.}(2018){Jao}, {Henry}, {Gies}, \& {Hambly}}]{Jao2018}
 {Jao}, W.-C., {Henry}, T.~J., {Gies}, D.~R., \& {Hambly}, N.~C. 2018, \apjl,
   861, L11, \dodoi{10.3847/2041-8213/aacdf6}
+
+\bibitem[{{MacDonald} \& {Gizis}(2018)}]{MacDonald2018}
+{MacDonald}, J., \& {Gizis}, J. 2018, \mnras, 480, 1711,
+  \dodoi{10.1093/mnras/sty1888}
 
 \bibitem[{{Magee} {et~al.}(2004){Magee}, {Abdallah}, {Colgan}, {Hakel},
   {Kilcrease}, {Mazevet}, {Sherrill}, {Fontes}, \& {Zhang}}]{Magee2004}
