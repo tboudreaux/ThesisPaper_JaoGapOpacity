@@ -1,0 +1,7 @@
+point 1: diffusive mixing is a bad approximation given the size of the time step, charectaristic numeric velocity, and scale of the radiative and convective zone in the model. We did this back at the second year exam
+point 4: its not artifical, both OPAL and OPLIB are atomic (not valid with molecular lines). You want to be fully transistioned before any molecules start forming. Find log R as a function of T in the model, include in ref report for one model in the Jao Gap Range
+point 5: gravitational setteling is decribed in Aarons 2008 paper (elements are grouped together as one). We dont see helioseismology as relevannt as we are not producing high presicion heloseismic models
+point 6: we are using the GS98 abundance. Low mass models are relativly insensiticve to mixing length. Run a new grid with a lower mixing length (1.5) and see what the results are. Baraffe and Chabery talk about how low mass models are relativly insensitive to mixing length.
+		 (maybe next paper) What are the results of turning on convective core overshoot? Very small convective core stars have very large pressure scale height. Maybe add a second constraint to fractional size by radius.
+		 
+Run 2 grids - one with lower almpa_ml but no convective overshoot and one with the solar calibrated alpha_ml but overshoot turned on a a low lambda (https://iopscience.iop.org/article/10.1086/424966/pdf)
