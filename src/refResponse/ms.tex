@@ -1,0 +1,275 @@
+% LaTeX rebuttal letter example. 
+% 
+% Copyright 2019 Friedemann Zenke, zenkelab.org
+%
+% Based on examples by Dirk Eddelbuettel, Fran and others from 
+% https://tex.stackexchange.com/questions/2317/latex-style-or-macro-for-detailed-response-to-referee-report
+% 
+% Licensed under cc by-sa 3.0 with attribution required.
+
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum} % to generate some filler text
+\usepackage{fullpage}
+
+% import Eq and Section references from the main manuscript where needed
+% \usepackage{xr}
+% \externaldocument{manuscript}
+
+% package needed for optional arguments
+\usepackage{xifthen}
+% define counters for reviewers and their points
+\newcounter{reviewer}
+\setcounter{reviewer}{0}
+\newcounter{point}[reviewer]
+\setcounter{point}{0}
+
+% This refines the format of how the reviewer/point reference will appear.
+\renewcommand{\thepoint}{\arabic{point})} 
+
+% command declarations for reviewer points and our responses
+\newcommand{\reviewersection}{\stepcounter{reviewer} \bigskip \hrule
+                  \section*{Reviewer \thereviewer}}
+
+\newenvironment{point}
+   {\refstepcounter{point} \bigskip \noindent {\textbf{Referee~Point~\thepoint} } ---\ }
+   {\par }
+
+\newcommand{\shortpoint}[1]{\refstepcounter{point}  \bigskip \noindent 
+	{\textbf{Reviewer~Point~\thepoint} } ---~#1\par }
+
+\newenvironment{reply}
+   {\medskip \noindent \begin{sf}\textbf{Reply}:\  }
+   {\medskip \end{sf}}
+
+\newcommand{\shortreply}[2][]{\medskip \noindent \begin{sf}\textbf{Reply}:\  #2
+	\ifthenelse{\equal{#1}{}}{}{ \hfill \footnotesize (#1)}%
+	\medskip \end{sf}}
+
+\begin{document}
+
+\section*{Response to the referee}
+% General intro text goes here
+We thank the referee for their critical assessment of our work. 
+In the following we address their concerns point by point. 
+
+% Let's start point-by-point with Reviewer 1
+\hrule
+% Point one description 
+\begin{point}
+	Since neither set of models using the two different opacity tables provide a
+	good match to the properties of the Jao gap, the possibility that the
+	convective kissing instability is not the correct explanation for the gap
+	has to be considered.
+
+	The first paper to offer an explanation for the existence of the gap (MacDonald
+	\& Gizis 2018) states 'Convective mixing is treated as a diffusion process
+	with the diffusion coefficient determined from mixing length theory.' and
+	'The fully implicit nature of our code also prevents the convective kissing
+	instability discovered and described by van Saders \& Pinsonneault (2012).'
+	The treatment of convective mixing as a diffusion process is probably the
+	reason why MacDonald \& Gizis find a single episode of convection zone
+	merger (for models in which merger occurs) and hence a single dip in the
+	luminosity function, which seems to be the case for the Jao gap (inferred
+	from figure 1 of this paper).
+
+	In contrast, the use of instantaneous mixing leads to multiple episodes of
+	convection zone merger and this could be the reason why the authors find
+	two dips in the luminosity function (inferred from their figures 7 and 8).
+	The authors need to give in the paper a convincing argument as to why the
+	instantaneous mixing approximation is valid, particularly as using the
+	diffusion approach seems to more physically consistent with current
+	understanding of turbulent mixing. This should involve estimates using
+	mixing length theory of the mixing time scale at all stages of the merger,
+	with special attention to mixing time scales within one mixing length on
+	either side of the point of contact between the merging convection zones.
+	This region is where the mixing time scale is most likely to be the
+	longest.
+
+	The mixing time scale then needs to compared to other relevant time scales
+	including the time scale for deuterium to come into equilibrium and the
+	time scale at which the helium-3 abundance is modified by nuclear
+	reactions.
+
+	If it turns out that the instantaneous mixing approximation is not valid, then
+	there needs to be discussion of alternative approaches and their
+	consequences. The thrust of the paper could be changed to show that the CKI
+	is not the correct explanation of the gap.
+\label{pt:timescale}
+\end{point}
+
+% Our reply
+\begin{reply}
+	We disagree with the referee that the a diffusive model of convective
+	mixing should be prefered over an instantaneous model of convective mixing.
+	Much of the following has been included as text in the manuscript.
+
+	As the referee says the primary point to clarify here is the ratio of the
+	overturn timescale to the timestep length. DSEP treats convective mixing
+	instantanously throught a single shell and we evolve models composed of
+	5000 radial shells. Convective overturn timescales for M-dwarfs have not
+	insignifigant uncertanties on them (with different sources reporting
+	overturn times between 70 and 300 days). However, all of these estimates
+	are order of magnitude shorter than the time steps used (which bottom out
+	at around 1 Myr). Therefore, convective mixing is extremly well
+	approximated by instantanious mixing.
+
+	To get a better sense of this for our models we find the overturn time for
+	a single shell at the radial depth where convective kissing instability
+	happens in our models and compare this to our time step length. For a
+	single shell the overturn time is [DAYS], which is [FRACTION] shorter than
+	the time steps we used.
+
+	Moreover, through private communication with Gregory Feiden, a leading
+	expert on the Jao Gap, we have recived independent cooberation of these
+	time scales.
+
+	Therefore, we do belive that instanious mixing is a valid appoximation to
+	make for these models. The thrust of this paper will therefore remain the
+	same.
+
+	The text addressing this has been added into the section entitled Modeling.
+\end{reply}
+
+\begin{point}
+	The convective mixing method used by MacDonald \& Gizis needs to be properly
+	described along with the resulting differences from using instantaneous
+	mixing.
+	\label{pt:address}
+\end{point}
+
+\begin{reply}
+	Additional text has been added to the introduction of the paper addressing the
+	resulst of MacDonald \& Gizis. 
+\end{reply}
+
+\begin{point}
+	On line 184, the authors say that the OPLIB tables were created to resolve the
+	discrepancy between helioseismic and solar model predictions of chemical
+	abundances in the Sun. I find this to be an odd way to phrase the problem.
+	Presumably the authors are referring to the difficulty of making solar
+	models that match the sound speed profile (or almost equivalently the depth
+	of the surface convection zone) determined by helioseismology given the
+	composition constraints provided by the then recent new measurements of the
+	surface abundances, notably the oxygen abundance. The authors should
+	rephrase the problem and also discuss whether using OPLIB opacities help
+	resolve the problem or not.
+	\label{pt:seismo}
+\end{point}
+
+\begin{reply}
+	We agree with the refee that the invocation of helioseismic discrepencies
+	is confusing. Because this is not a helioseismic paper we drop from the
+	text, instead just mentioning that the OPLIB tables make use of the most up
+	to date physics, which is the most relevant point to our work. We do note
+	here though that the OPLIB opacities did not serve to resolve any
+	discrepencies.
+\end{reply}
+
+\begin{point}
+	The distinction between low temperature and high temperature opacity sources
+	made in the paragraph beginning on line 196 is somewhat artificial.
+	Presumably the transition between low temperature and high temperature
+	opacity is chosen to be between $10^{4.3}$ and $10^{4.5}$ K because there
+	is where the Ferguson et al. opacities and OPAL opacities are close to each
+	other. Perhaps the evolution could be affected if a different temperature
+	range for the transition is used. The authors should stress in this section
+	that as far as modeling the gap the main impact of using different
+	opacities is on the radiative zone, and give the temperature and R (or
+	density) ranges that are relevant to the radiative zone(s) so that the
+	reader can see from figure 3 the expected change in opacity, and also if
+	log R = -1.5 is truly a representative value in the radiative zone.
+
+	Also, from figure 3, it seems that the OPLIB opacities are lower than the OPAL
+	opacities for temperatures greater than $10^{5.5}$ K and not $10^{5}$ K as
+	stated in the figure caption and also on line 203.
+	\label{pt:lowtempboundary}
+\end{point}
+
+\begin{reply}
+	The range where DSEP ramps from low temperature to high temperature
+	opacities is determined by the temperature range where molecules can start
+	to form. It is important for the low temperature opacities to be the only
+	opacity source by the time the first molecules start forming. We choose to
+	ramp the opacity source so that there is not a hard discontinuity. This
+	same ramp has been used as standard in all DSEP models since 2008, see
+	Dotter et al. 2008 for further details.
+\end{reply}
+
+\begin{point}
+	In section 3.2, mention is made of the solar surface Z/X ratio but the actual
+	value is not given. Is it the value recently determined by Magg et al.
+	(2022), Z/X = 0.0225 or some other earlier value? The authors should state
+	the actual Z/X value used.
+
+	Also, the authors need to say whether or not they include gravitational
+	settling and element diffusion in their solar modeling, and if they do, say
+	how it is done (e.g. are elements grouped or treated independently). The
+	authors should also include discussion of how well their solar models
+	replicate the sound speed profile determined from helioseismology.
+	\label{pt:ZX}
+\end{point}
+
+\begin{reply}
+	The calibrated Z/X value has been added into the text in section 3.2 along
+	with clarification that we do include gravitational setteling with elements
+	grouped together. We do not include a disscusion of sound speed in our
+	manuscript. This paper is not a disscusion of seismology so a diversion to that
+	would be disctracting for readers and out of place.
+\end{reply}
+
+\begin{point}
+	Presumably, the authors use their solar calibrated models to set the mixing
+	length ratio and initial abundances for their calculations of the evolution
+	of models of low mass stars. Do they use primordial or present-day solar
+	abundances? Why should the mixing length ratio be the same as the solar
+	calibrated? There is evidence that the mixing length varies with stellar
+	properties (e.g. Trampedach et al. 2014; Joyce \& Chaboyer 2018). A better
+	fit to the location of the gap might be obtained by adjusting the mixing
+	length ratio. The authors need to address these questions.
+	\label{pt:alpha}
+\end{point}
+
+\begin{reply}
+	We use GS98 solar abundances [CITATION] for all models. While, as the
+	referee says, there is substanntial evidence of a metallicity dependence
+	for the mixing length parameter this dependence has only been shown to have
+	a substantial effect on higher mass stars. However, to fully address this
+	point we have run an additional grid of models with the mixing length
+	parameter dramatically lowered ($\alpha_{ML} = 1.5$). Results of that grid
+	are shown in Figure [FIGURE]. Of primary note however, is that the Jao Gap
+	loaction is within one sigma of where we detect in with our solar
+	calibrated mixing length. Text has been added into the paper clarifying
+	that we use a solar calibrated mixing length but that the actual Jao Gap
+	location of our models is only very weekly sensitive to mixing length.
+\end{reply}
+
+\begin{point}
+	On trying the web interface for the OPLIB, it seems that the process of
+	interpolating between rho and R is unnecessary. Once T is specified, it is
+	possible to get the same set of R values as for the OPAL tables by
+	specifying the starting value of rho. Then only interpolation in T is
+	needed to get a table in the same form as the OPAL tables. The authors need
+	to clarify why they chose their approach. Also, it would be helpful to
+	include in figure 15 a line plot of fractional difference against log T for
+	log R = -1.5 or a different R value if -1.5 is not found to be
+	representative for the radiative zone (see point 4). \label{pt:webR}
+\end{point}
+
+\begin{reply}
+	While it is possible to pick out particularl $R$ values and get them
+	directly with the OPLIB webform it is not possible to get the same grid of
+	R values from the web form as the type 2 OPAL tables report opacities over.
+	This is because the grid of temperatures OPLIB populates does not line up
+	with what would be needed. Therefore, the interpolation scheme described in
+	Appendix B is required.
+\end{reply}
+
+\subsection*{Minor}
+
+% Use the short-hand macros for one-liners.
+\shortpoint{ Typo in line xy. }
+\shortreply{ Fixed.}
+
+
+\end{document}
