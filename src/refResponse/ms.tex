@@ -11,6 +11,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{lipsum} % to generate some filler text
 \usepackage{fullpage}
+\usepackage{graphicx}
 
 % import Eq and Section references from the main manuscript where needed
 % \usepackage{xr}
@@ -46,12 +47,17 @@
 	\ifthenelse{\equal{#1}{}}{}{ \hfill \footnotesize (#1)}%
 	\medskip \end{sf}}
 
+\newcommand{\appropto}{\mathrel{\vcenter{
+  \offinterlineskip\halign{\hfil$##$\cr
+    \propto\cr\noalign{\kern2pt}\sim\cr\noalign{\kern-2pt}}}}}
+
 \begin{document}
 
 \section*{Response to the referee}
 % General intro text goes here
-We thank the referee for their critical assessment of our work. 
-In the following we address their concerns point by point. 
+We thank the referee for their critical assessment of our work. In the
+following we address their concerns point by point. All changes made to the
+manuscript have been boldfaced. 
 
 % Let's start point-by-point with Reviewer 1
 \hrule
@@ -100,35 +106,85 @@ In the following we address their concerns point by point.
 
 % Our reply
 \begin{reply}
-	We disagree with the referee that the a diffusive model of convective
-	mixing should be prefered over an instantaneous model of convective mixing.
-	Much of the following has been included as text in the manuscript.
+	We respectfully disagree with the referee that a diffusive model of
+	convective mixing should be preferred over an instantaneous model of
+	convective mixing. Much of the following has been included as text in the
+	manuscript.
 
-	As the referee says the primary point to clarify here is the ratio of the
-	overturn timescale to the timestep length. DSEP treats convective mixing
-	instantanously throught a single shell and we evolve models composed of
-	5000 radial shells. Convective overturn timescales for M-dwarfs have not
-	insignifigant uncertanties on them (with different sources reporting
-	overturn times between 70 and 300 days). However, all of these estimates
-	are order of magnitude shorter than the time steps used (which bottom out
-	at around 1 Myr). Therefore, convective mixing is extremly well
-	approximated by instantanious mixing.
+	% As the referee says the primary point to clarify here is the ratio of the
+	% overturn timescale to the timestep length. DSEP treats convective mixing
+	% instantanously throught a single shell and we evolve models composed of
+	% 5000 radial shells. Convective overturn timescales for M-dwarfs have not
+	% insignifigant uncertanties on them (with different sources reporting
+	% overturn times between 70 and 300 days). Therefore, for a single shell the
+	% overturn timescale will be of order $10^{5}$s. However, all of these
+	% estimates are order of magnitude shorter than the time steps used (which
+	% bottom out at around 1 Myr). Specifically, K\"apyl\"a 2021 presents
+	% hydrodynamical simulations of fully convective stars and find that the
+	% overturn times are on the order of $10^{7}$s (Their Table 1). Therefore,
+	% convective mixing is extremly well approximated by instantanious mixing.
 
-	To get a better sense of this for our models we find the overturn time for
-	a single shell at the radial depth where convective kissing instability
-	happens in our models and compare this to our time step length. For a
-	single shell the overturn time is [DAYS], which is [FRACTION] shorter than
-	the time steps we used.
+	Chabrier \& Baraffe 1997 identify that an instantaneous mixing model of
+	convection may have a strong suppressing effect on a models luminosity. The
+	root cause of this effect is the build up of a deuterium gradient in a
+	models core when the mixing timescale is significantly longer than the
+	deuterium burning timescale. Chabrier \& Baraffe estimate the mixing
+	timescale for a fully convective star ($\sim 0.1M_{\odot}$) is 10$^{8}$.
+	However, these estimates relied on the mixing length approximation of
+	convection and make use of assumptions only valid in super-adiabatic regions
+	(estimating the velocity of turbulent eddies as $(\nabla -
+	\nabla_{adb})^{1/2}$). Whereas, in 1997 these estimates were the best
+	available, currently hydrodynamical approximations, which are more
+	physically motivated and more accurate, should be preferred. These
+	hydrodynamical approximations of the mixing timescale are an order of
+	magnitude shorter than those Chabrier and Baraffe estimate ($10^{7}$s
+	compared to $10^{8}$s). Moreover, Chabrier and Baraffe make use of the
+	mixing time over the entire radius of the star (the overturn time).
+	However, when judging the efficacy of an instantaneous mixing approximation
+	the more relevant timescale is the mixing time over one shell. For the
+	configuration we evolve models using (with 5000 shells), the mixing time
+	over one shell will be of order $10^4$s. This is now much shorter than the
+	deuterium lifetime against proton capture. Therefore, the deuterium
+	gradient predicted in Chabrier \& Baraffe --- which MacDonald \& Gizis 2018
+	address through use of a diffusive model of convection --- will not build up
+	and need not be accounted for.
 
-	Moreover, through private communication with Gregory Feiden, a leading
-	expert on the Jao Gap, we have recived independent cooberation of these
-	time scales.
+	In addition to these timescale arguments, we direct the referee to recent
+	work conducted by the MESA collaboration (Jermyn et al. 2022 Figure 2 \&
+	private communication with Aaron Dotter - Figures ). MESA has recently
+	implemented time dependent convection (TDC) in addition to standard mixing
+	length theory (MLT) making use of instantaneous mixing. The models
+	presented in Figures \ref{fig:MESA1} and \ref{fig:MESA2} are for stars
+	within the Jao Gap (identified in MESA in Mansfield \& Kroupa 2021). Note
+	the extreme similarity between the instantaneous approximation and the time
+	dependent convective models. Additionally, in the lower panel of Figure \ref{fig:MESA2}
+	note that both the MLT and TDC models show periodic dips in the core $^{3}$He
+	mass fraction, as is predicted by CKI.
 
-	Therefore, we do belive that instanious mixing is a valid appoximation to
-	make for these models. The thrust of this paper will therefore remain the
-	same.
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.85\textwidth]{./Figure_4.png}
+		\caption{Results aquired through private communication with Aaron Dotter showing
+		MESA models from Mansfield \& Kroupa 2021 (a model near the Jao Gap). One
+		model makes use of a standard instantaneous mixing approximation while the other
+		uses the newly introduced Time Dependent Convection. Note the similarity between the
+		models}
+		\label{fig:MESA1}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.85\textwidth]{./Figure_4_zoom.png}
+		\caption{Results aquired through private communication with Aaron Dotter showing
+		MESA models from Mansfield \& Kroupa 2021 (a model near the Jao Gap). One
+		model makes use of a standard instantaneous mixing approximation while the other
+		uses the newly introduced Time Dependent Convection. Note the similarity between the
+		models}
+		\label{fig:MESA2}
+	\end{figure}
 
-	The text addressing this has been added into the section entitled Modeling.
+	For both of these reasons we content that an instantaneous mixing model of
+	convection is a good approximation in this instance and that the results
+	we present, showing kissing instability, are valid.
 \end{reply}
 
 \begin{point}
@@ -139,8 +195,8 @@ In the following we address their concerns point by point.
 \end{point}
 
 \begin{reply}
-	Additional text has been added to the introduction of the paper addressing the
-	resulst of MacDonald \& Gizis. 
+	Additional text has been added to the paper addressing the results of
+	MacDonald \& Gizis. 
 \end{reply}
 
 \begin{point}
@@ -158,12 +214,12 @@ In the following we address their concerns point by point.
 \end{point}
 
 \begin{reply}
-	We agree with the refee that the invocation of helioseismic discrepencies
+	We agree with the referee that the invocation of helioseismic discrepancies
 	is confusing. Because this is not a helioseismic paper we drop from the
 	text, instead just mentioning that the OPLIB tables make use of the most up
 	to date physics, which is the most relevant point to our work. We do note
 	here though that the OPLIB opacities did not serve to resolve any
-	discrepencies.
+	discrepancies.
 \end{reply}
 
 \begin{point}
@@ -194,6 +250,14 @@ In the following we address their concerns point by point.
 	ramp the opacity source so that there is not a hard discontinuity. This
 	same ramp has been used as standard in all DSEP models since 2008, see
 	Dotter et al. 2008 for further details.
+
+	We have updated references in our paper to Log(R)=-1.5 as a good approximation
+	throughout a star. For a GS98 solar composition 1 solar mass model this is
+	a good approximation; however, we calculate Log(R) throughout a 0.356 solar
+	mass model (the same model used to generate Figure 2 in the manuscript) and
+	find that a more representative value of Log(R) is -0.79. It is not surprising
+	that this value is somewhat larger given the lower mass of this model and
+	the commensurately lower pressures and temperatures.
 \end{reply}
 
 \begin{point}
@@ -212,10 +276,10 @@ In the following we address their concerns point by point.
 
 \begin{reply}
 	The calibrated Z/X value has been added into the text in section 3.2 along
-	with clarification that we do include gravitational setteling with elements
-	grouped together. We do not include a disscusion of sound speed in our
-	manuscript. This paper is not a disscusion of seismology so a diversion to that
-	would be disctracting for readers and out of place.
+	with clarification that we do include gravitational settling with elements
+	grouped together. We do not include a discussion of sound speed in our
+	manuscript. This paper is not a discussion of seismology so a diversion to that
+	would be distracting for readers and out of place.
 \end{reply}
 
 \begin{point}
@@ -231,17 +295,65 @@ In the following we address their concerns point by point.
 \end{point}
 
 \begin{reply}
-	We use GS98 solar abundances [CITATION] for all models. While, as the
-	referee says, there is substanntial evidence of a metallicity dependence
-	for the mixing length parameter this dependence has only been shown to have
-	a substantial effect on higher mass stars. However, to fully address this
-	point we have run an additional grid of models with the mixing length
-	parameter dramatically lowered ($\alpha_{ML} = 1.5$). Results of that grid
-	are shown in Figure [FIGURE]. Of primary note however, is that the Jao Gap
-	loaction is within one sigma of where we detect in with our solar
-	calibrated mixing length. Text has been added into the paper clarifying
-	that we use a solar calibrated mixing length but that the actual Jao Gap
-	location of our models is only very weekly sensitive to mixing length.
+	We use GS98 solar abundances (Grevesse \& Sauval 1998) for all models. While, as the
+	referee says, there is substantial evidence of a metallicity dependence
+	for the mixing length parameter this dependence has only been calibrated
+	for higher mass stars. In order to fully address this point we have run an
+	additional grid of models with the mixing length parameter dramatically
+	lowered ($\alpha_{ML} = 1.5$ \& $\alpha_{ML} = 1.0$). Results of that grid
+	are shown in Figures \ref{fig:alphaMLML}, \ref{fig:alphaMLCMD}, and \ref{fig:alphaMLLoc}. 
+
+	What is clear from these additional grids is that the Jao Gap location is
+	sensitive to the value of the mixing length parameter with the magnitude of
+	the gap being inversely proportional too the mixing length parameter
+	($G_{mag} \appropto -0.15\alpha_{ML}$). Moreover, dramatically lowering the
+	mixing length parameter to $\alpha_{ML} = 1.0$ does bring the location of
+	the Jap Gap we model in closer agreement with the empirically measured
+	location of the Gap.
+
+	However, there is no a priori reason which we are aware of to expect the
+	mixing length parameter to be so much lower in these low mass stars than it
+	would be in the sun. Much of the work calling into question the use of
+	solar calibrated mixing lengths in higher mass stars has identified a
+	[Fe/H] dependence. Given that the population of stars which the Jao Gap has
+	been identified in is relatively similar to the sun in composition
+	extrapolating the empirical calibrations backward would not predict such a
+	large dip in the mixing length.
+
+	Therefore, we have modified the manuscript to include a limited discussion
+	of the perils of using solar calibrated mixing length parameters, along
+	with the results of our $\alpha_{ML} = 1.5$ and $1.0$ populations; however,
+	we still favor the use of the solar calibrated mixing lengths. Finally, we
+	have added into the conclusions a call for further work to be done
+	studying the Jao Gap location as a potential calibration point for the mixing
+	length of lower mass stars.
+
+	We thank the referee for pointing us in this direction.
+	
+
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.8\textwidth]{./AlphaMLMassLum.pdf}
+		\caption{Mass Luminosity relation for mixing length grid. From top to
+		bottom: solar calibrated mixing length, mixing length of 1.5, and
+		mixing length of 1.0}
+		\label{fig:alphaMLML}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.8\textwidth]{./alphaMLComparisionCMD.pdf}
+		\caption{Jao Gap seen in three populations using OPLIB high temperature
+		opacities. From left to right these use a solar calibrated mixing length,
+		a mixing length of 1.5, and a mixing length of 1.0}
+		\label{fig:alphaMLCMD}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.8\textwidth]{./MixingLengthScaling.pdf}
+		\caption{Identified locations of the two density dips we observe as a
+		function of the Mixing Length used in those populations.}
+		\label{fig:alphaMLLoc}
+	\end{figure}
 \end{reply}
 
 \begin{point}
@@ -257,19 +369,30 @@ In the following we address their concerns point by point.
 \end{point}
 
 \begin{reply}
-	While it is possible to pick out particularl $R$ values and get them
-	directly with the OPLIB webform it is not possible to get the same grid of
-	R values from the web form as the type 2 OPAL tables report opacities over.
-	This is because the grid of temperatures OPLIB populates does not line up
-	with what would be needed. Therefore, the interpolation scheme described in
-	Appendix B is required.
+	While given some fixed temperature, T, it is possible to set the density
+	grid on the webform such that R is exactly specified. This is not feasible
+	when using a range of temperatures and densities simultaneously.
+	Specifically, because each temperature within such a range would require a
+	unique density range to be specified in order to match the OPAL table R
+	range. This is not a feature offered by the webform.
+
+	The reason we avoid querying a single temperature at a time is that making
+	a separate call to the TOPS webform for not just each composition but also
+	each temperature in that composition would increase the traffic per OPAL
+	table by a factor of 70 (from 126 calls currently to 8820). This is both
+	infeasible from a runtime perspective (as opening a new call is the most
+	time intensive part of the scraper as the JavaScript engine is initialized
+	and would likely push the generation time of a single table from 10
+	minutes to over 5 hours) and would place a significantly increased load on
+	the Los Alamos servers. We have spoken with the Los Alamos team and have
+	their consent to release this software with only with the current traffic
+	it generates. 
+
+	A brief description of this has been included in Appendix B.
+
+	The vertical line on Figure 13 has been updated to reflect the more accurate 
+	approximation of Log(R) = -0.79 throughout the star as opposed to -1.5.
 \end{reply}
-
-\subsection*{Minor}
-
-% Use the short-hand macros for one-liners.
-\shortpoint{ Typo in line xy. }
-\shortreply{ Fixed.}
 
 
 \end{document}

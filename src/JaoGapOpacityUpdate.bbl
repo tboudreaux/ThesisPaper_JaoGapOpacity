@@ -19,6 +19,12 @@
 {Baraffe}, I., \& {Chabrier}, G. 2018, \aap, 619, A177,
   \dodoi{10.1051/0004-6361/201834062}
 
+\bibitem[{{Baraffe} {et~al.}(1997){Baraffe}, {Chabrier}, {Allard}, \&
+  {Hauschildt}}]{Baraffe1997}
+{Baraffe}, I., {Chabrier}, G., {Allard}, F., \& {Hauschildt}, P.~H. 1997, \aap,
+  327, 1054.
+\newblock \doarXiv{astro-ph/9704144}
+
 \bibitem[{Boudreaux(2022)}]{Boudreaux22}
 Boudreaux, T. 2022, tboudreaux/pytopsscrape: pyTOPSScrape v1.0, v1.0,  Zenodo,
   \dodoi{10.5281/zenodo.7094198}
@@ -94,6 +100,10 @@ Dotter, A., Chaboyer, B., Jevremovi{\'c}, D., {et~al.} 2008, The Astrophysical
 {Gaia Collaboration}, {Smart}, R.~L., {Sarro}, L.~M., {et~al.} 2021, \aap, 649,
   A6, \dodoi{10.1051/0004-6361/202039498}
 
+\bibitem[{{Grevesse} \& {Sauval}(1998)}]{Grevesse1998}
+{Grevesse}, N., \& {Sauval}, A.~J. 1998, \ssr, 85, 161,
+  \dodoi{10.1023/A:1005161325181}
+
 \bibitem[{{Hakel} {et~al.}(2006){Hakel}, {Sherrill}, {Mazevet}, {Abdallah},
   {Colgan}, {Kilcrease}, {Magee}, {Fontes}, \& {Zhang}}]{Hakel2006}
 {Hakel}, P., {Sherrill}, M.~E., {Mazevet}, S., {et~al.} 2006, \jqsrt, 99, 265,
@@ -119,6 +129,14 @@ Dotter, A., Chaboyer, B., Jevremovi{\'c}, D., {et~al.} 2008, The Astrophysical
 \bibitem[{{Jao} {et~al.}(2018){Jao}, {Henry}, {Gies}, \& {Hambly}}]{Jao2018}
 {Jao}, W.-C., {Henry}, T.~J., {Gies}, D.~R., \& {Hambly}, N.~C. 2018, \apjl,
   861, L11, \dodoi{10.3847/2041-8213/aacdf6}
+
+\bibitem[{{Joyce} \& {Chaboyer}(2018)}]{Joyce2018}
+{Joyce}, M., \& {Chaboyer}, B. 2018, \apj, 864, 99,
+  \dodoi{10.3847/1538-4357/aad464}
+
+\bibitem[{{K{\"a}pyl{\"a}}(2021)}]{Kapyla2021}
+{K{\"a}pyl{\"a}}, P.~J. 2021, \aap, 651, A66,
+  \dodoi{10.1051/0004-6361/202040049}
 
 \bibitem[{{MacDonald} \& {Gizis}(2018)}]{MacDonald2018}
 {MacDonald}, J., \& {Gizis}, J. 2018, \mnras, 480, 1711,
@@ -164,6 +182,16 @@ Richardson, L. 2007, April
 \bibitem[{Sollima(2019)}]{Sollima2019}
 Sollima, A. 2019, Monthly Notices of the Royal Astronomical Society, 489, 2377,
   \dodoi{10.1093/mnras/stz2093}
+
+\bibitem[{{Spada} {et~al.}(2021){Spada}, {Demarque}, \& {Kupka}}]{Spada2021}
+{Spada}, F., {Demarque}, P., \& {Kupka}, F. 2021, \mnras, 504, 3128,
+  \dodoi{10.1093/mnras/stab1106}
+
+\bibitem[{{Trampedach} {et~al.}(2014){Trampedach}, {Stein},
+  {Christensen-Dalsgaard}, {Nordlund}, \& {Asplund}}]{Trampedach2014}
+{Trampedach}, R., {Stein}, R.~F., {Christensen-Dalsgaard}, J., {Nordlund},
+  {\r{A}}., \& {Asplund}, M. 2014, \mnras, 445, 4366,
+  \dodoi{10.1093/mnras/stu2084}
 
 \bibitem[{{van Saders} \& {Pinsonneault}(2012)}]{van2012}
 {van Saders}, J.~L., \& {Pinsonneault}, M.~H. 2012, \apj, 751, 98,

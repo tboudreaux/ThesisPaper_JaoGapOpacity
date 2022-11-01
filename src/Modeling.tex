@@ -8,6 +8,14 @@ GS98 solar composition, the (1, 101, 0) \texttt{FreeEOS} (version
 {\color{red}2.7}) configuration, and 1000 year old pre-main sequence polytropic
 models, with polytropic index 1.5, as their initial conditions.
 
+\textbf{Despite the alternative view of convection provided by
+\citet{MacDonald2018} disscused in Section \ref{sec:JaoGap} and given that the
+mixing timescales in these low mass stars are so short \citep[$\sim10^{4}$s over a
+single model shell per][]{Kapyla2021} that instantaneous mixing is a valid approximation, we
+elect to use the instantaneous mixing model of convection. Additionally, we
+include gravitational settling in our models, where
+elements are grouped together.}
+
 Because in this work we are just interested in the location shift of the Gap as
 the opacity source varies, we do not model variations in composition.
 \citet{Mansfield2021,Jao2020,Feiden2021} all look at the effect composition has
@@ -103,3 +111,56 @@ using OPAL and OPLIB opacities are presented in Figure
 	has been overlaid to better highlight the density variations.}
 	\label{fig:PopSynthCompareBasic}
 \end{figure*}
+
+\subsection{Mixing Length Dependence}
+\textbf{In order to test the sensitivity of Gap properties to mixing length we
+evolve three seperate sets OPLIB of models. The first (OPLIB-A) uses a GS98
+solar calibrated mixing length, the second (OPLIB-B) uses a mixing length of
+1.5, and the third (OPLIB-C) uses a mixing length of 1.0.}
+
+\textbf{We find a clear inverse corelation between mixing length parameter used
+and the magnitude of the Jao Gap Figures \ref{fig:MixingLengthCMD} \&
+\ref{fig:MixingLengthScaling} ($\mu_{G} \propto -1.5\alpha_{ML}$, where
+$\mu_{G}$ is the mean magnitude of the Gap). This is somewhat suprising given
+the long estabilished view that the mixing length parameter is of little
+relevance in fully convective stars \citep{Baraffe1997}. We find an approximate
+0.3 magnitude shift in both the color and magnitude comparing a solar
+calibrated mixing length to a mixing length of 1.5, despite only a 16K
+difference in effective temperature at 7Gyr between two 0.3 solar mass models.
+The mixing length then provides a free parameter which may be used to shift the
+gap location in order to better match observations without having a major
+impact on the effective temperature of models. Moreover, recent work indicates
+that using a solar calibrated mixing length is not appropriate for all stars
+\citep[e.g.][]{Trampedach2014, Joyce2018}.}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45\textwidth]{./alphaMLComparisionCMD.pdf}
+	\caption{CMD showing OPLIB populations (from left to right) A, B, and C.}
+	\label{fig:MixingLengthCMD}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45\textwidth]{./MixingLengthScaling.pdf}
+	\caption{\textbf{Location of the two identified paucity of stars in OPLIB synthetic
+	populations as a function of the mixing length used.}}
+	\label{fig:MixingLengthScaling}
+\end{figure}
+
+\textbf{Given the variability of gap location with mixing length, it is
+possible that a better fit to the gap location may be achived through
+adjustment of the convective mixing length parameter. However, calibrations of
+the mixing length for stars other than the sun have focused on stars with
+effective temperature at or above that of the sun and there are no current
+calibrations of the mixing length parameter for M dwarfs. Moreover, there are
+additional uncertanties when comparing the predicted gap location to the
+measured gap location, such as those in the conversion from effective
+temperature, surface gravity, and luminosity to color, which must be considered
+if the mixing length is to be used as a gap location free paremerter. Given the
+dangers of freely adjustable paremerters and the lack of an a priori
+expectation for what the convective mixing parameter should be for the
+population of M Dwarfs in the Gaia DR2 and EDR3 CMD we caution against
+adjusting the mixing length to force the Jao Gap magnitude into better
+agreement with observations.}
+
