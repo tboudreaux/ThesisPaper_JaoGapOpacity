@@ -14,14 +14,14 @@ conversion from temperature in keV to Kelvin is trivial (Equation
 However, the conversion from mass density to $R$ is more involved. Because $R$
 is coupled with both mass density and temperature there there is no way to
 directly convert tabulated values of opacity reported in the OPLIB tables to
-their equivalents in $R$ space. \textbf{The TOPS webform does allow for a
+their equivalents in $R$ space. The TOPS webform does allow for a
 density range to be specified at a specific temperature, which allows for R
 values to be directly specified. However, issuing a query to the TOPS webform
 for not just every composition in a Type 1 OPAL high temperature opacity table
 but also every temperature for every composition will increase the number of
 calls to the webform by a factor of 70. Therefore, instead of directly
-specificifying R through the density range we choose to query tables over a
-broad temperature and density range and then} rotate \textbf{these} tables,
+specifying R through the density range we choose to query tables over a
+broad temperature and density range and then rotate \textbf{these} tables,
 interpolating $\kappa_{R}(\rho,T_{eff}) \rightarrow \kappa_{R}(R,T_{eff})$. 
 
 

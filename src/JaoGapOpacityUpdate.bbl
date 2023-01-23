@@ -10,6 +10,11 @@
 {Amard}, L., {Palacios}, A., {Charbonnel}, C., {et~al.} 2019, \aap, 631, A77,
   \dodoi{10.1051/0004-6361/201935160}
 
+\bibitem[{{Bahcall} {et~al.}(2001){Bahcall}, {Pinsonneault}, \&
+  {Basu}}]{Bahcall2001}
+{Bahcall}, J.~N., {Pinsonneault}, M.~H., \& {Basu}, S. 2001, \apj, 555, 990,
+  \dodoi{10.1086/321493}
+
 \bibitem[{{Bahcall} {et~al.}(2005){Bahcall}, {Serenelli}, \&
   {Basu}}]{Bahcall2005}
 {Bahcall}, J.~N., {Serenelli}, A.~M., \& {Basu}, S. 2005, \apjl, 621, L85,
@@ -130,13 +135,17 @@ Dotter, A., Chaboyer, B., Jevremovi{\'c}, D., {et~al.} 2008, The Astrophysical
 {Jao}, W.-C., {Henry}, T.~J., {Gies}, D.~R., \& {Hambly}, N.~C. 2018, \apjl,
   861, L11, \dodoi{10.3847/2041-8213/aacdf6}
 
+\bibitem[{{Jermyn} {et~al.}(2022){Jermyn}, {Bauer}, {Schwab}, {Farmer}, {Ball},
+  {Bellinger}, {Dotter}, {Joyce}, {Marchant}, {Mombarg}, {Wolf}, {Wong},
+  {Cinquegrana}, {Farrell}, {Smolec}, {Thoul}, {Cantiello}, {Herwig}, {Toloza},
+  {Bildsten}, {Townsend}, \& {Timmes}}]{Jermyn2022}
+{Jermyn}, A.~S., {Bauer}, E.~B., {Schwab}, J., {et~al.} 2022, arXiv e-prints,
+  arXiv:2208.03651.
+\newblock \doarXiv{2208.03651}
+
 \bibitem[{{Joyce} \& {Chaboyer}(2018)}]{Joyce2018}
 {Joyce}, M., \& {Chaboyer}, B. 2018, \apj, 864, 99,
   \dodoi{10.3847/1538-4357/aad464}
-
-\bibitem[{{K{\"a}pyl{\"a}}(2021)}]{Kapyla2021}
-{K{\"a}pyl{\"a}}, P.~J. 2021, \aap, 651, A66,
-  \dodoi{10.1051/0004-6361/202040049}
 
 \bibitem[{{MacDonald} \& {Gizis}(2018)}]{MacDonald2018}
 {MacDonald}, J., \& {Gizis}, J. 2018, \mnras, 480, 1711,

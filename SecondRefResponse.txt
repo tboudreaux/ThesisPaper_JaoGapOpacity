@@ -1,0 +1,65 @@
+We thank the reviewer for their time and their comments on our manuscript.
+Below please find responses to the comments provided. All changed made between
+this manuscript revision and the previous revision have been boldfaced.
+
+1. [Reviewer Comment]
+	I found it difficult to extract the convective turnover time scale from the
+	paper by Käpylä 2021. Also, I think this is an odd choice for a reference
+	as it doesn't deal with a 'real' stellar model but one with much higher
+	diffusivities that are required for numerical reasons, which lead to a very
+	short Kelvin-Helmholtz time scale (~375 years, compared to ~500 million
+	years for a realistic stellar model). It isn't clear whether the authors
+	have done the necessary scaling to get the 'real' convective turnover time
+	scale. A better source for the convective turnover time scale is figure 12
+	in the Jermyn et al. paper that the authors refer to in their Response to
+	the referee. The authors should replace Käpylä 2021 with Jermyn et al. and
+	clearly state that what is shown in Figure 12 in the Jermyn et al. is the
+	average over the convection zone.
+   [Response]
+	We have updated the text to reference Jermyn et al 2021. We note that we
+	did scale values to obtain real convective turnover times from Käpylä 2021,
+	and have verified via private communication with Käpylä that we did that
+	scaling correctly.
+
+2. [Reviewer Comment]
+	On page 7, line 389, in the context of how the location of the Jao Gap
+	depends on the value of the mixing length parameter, the authors state
+	'This is somewhat surprising given the long established view that the
+	mixing length parameter is of little relevance in fully convective stars
+	(Baraffe et al. 1997).' Presumably this view is based on fully convective
+	stars being very close to fully adiabatic. Although the temperature
+	difference between models is small (16 K), it is not insignificant because
+	the of the strong dependence of bolometric corrections on the effective
+	temperature. The authors should give a physical reason for the temperature
+	difference. I think that is likely due to small deviations from perfect
+	adiabaticity in the regions below the atmosphere, where the difference
+	between the structural and adiabatic gradients is order 0.001.
+   [Response]
+	We have investigated the adiabatic and radiative temperature gradients in
+	two, 0.3 solar mass, models. One model uses a solar calibrated mixing
+	length while the other uses the lower 1.5 mixing length. These models show
+	the reported 16K effective temperature difference. The referee is correct
+	that we find that both the adiabatic and radiative temperature gradients,
+	just below the surface of the models, are slightly steeper in the solar
+	calibrated mixing length model. Text to this effect has been added to the
+	manuscript.
+
+3. [Reviewer Comment]
+	In their Response to the referee, the authors mention that MESA now
+	includes time-dependent convection and include figures which compare TDC
+	results with standard MLT results. What these figures show is that standard
+	MLT is appropriate for modeling of low mass stars, which is not surprising
+	as the evolution time scales are very long compared to dynamical time
+	scales. They have nothing to do with the differences that result from
+	choice of mixing treatment, i.e. instantaneous v. diffusive, which remains
+	an unanswered question.
+   [Response]
+    We appreciate the referee's final comment.  Since none of this material
+    regarding MESA's time dependent convection was included in the paper, we do
+    not make any changes to the paper relating to this comment.
+
+
+[Misc Changes]
+ - The Magnitude axis on figure 8 has been inverted.
+ - The reviewer has been added to the acknowledgments of the paper.
+
